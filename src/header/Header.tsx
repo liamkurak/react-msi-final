@@ -9,7 +9,7 @@ const Header = () =>{
     return(
         <header>
             <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
-                <a href='#PetStore' className="navbar-brand">Pet GiuGiu</a>
+                <a href='#' className="navbar-brand">Pet GiuGiu</a>
                 <ul className="nav navbar-nav">
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.productRoute}> Product </NavLink>

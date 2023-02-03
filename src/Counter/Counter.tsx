@@ -23,39 +23,58 @@ export const  Counter = () => {
     const count = useSelector((state:any) => state.counter.value);
     const dispatch = useDispatch();
 
-    const [incrementAmount, setIncrementAmount] = useState("2");
+    const [changeAmount, setIncrementAmount] = useState("2");
 
     return (
-        <>
-            <button aria-label="Increment value"  onClick={() => dispatch(increment())} >
-                Increment
-            </button>
 
-            <span>{count}</span>
+<>
 
-            <button
-                aria-label="Decrement value"
-                onClick={() => dispatch(decrement())}
-            >
-                Decrement
-            </button>
-            
-            {/*<input*/}
-            {/*    className={styles.textbox}*/}
-            {/*    aria-label="Set increment amount"*/}
-            {/*    value={incrementAmount}*/}
-            {/*    onChange={(e) => setIncrementAmount(e.target.value)}*/}
-            {/*/>*/}
-            {/*<button*/}
-            {/*    className={styles.button}*/}
-            {/*    onClick={() =>*/}
-            {/*        dispatch(changeByAmount(Number(incrementAmount) || 0))*/}
-            {/*    }*/}
-            {/*>*/}
-            {/*    asd*/}
-            {/*<button/>*/}
 
-        </>
+    <div className={styles.row}>
+        <button
+            className={styles.button}
+            aria-label="Increment value"
+            onClick={
+                () => dispatch(increment())
+            }>
+            +
+        </button>
 
+        <span className={styles.value}>{count}</span>
+
+        <button
+            className={styles.button}
+            aria-label="Decrement value"
+            onClick={() => dispatch(decrement())}
+        >
+            -
+        </button>
+    </div>
+
+        {/*/!*add a space*!/*/}
+        {/*{'\u00A0 \u00A0' }*/}
+        <div className={styles.row}>
+        <input
+            className={styles.textbox}
+            aria-label="Set increment amount"
+            value={changeAmount}
+            onChange={(e) => setIncrementAmount(e.target.value)}
+        />
+        <button
+            className={styles.button}
+            onClick={() =>
+                dispatch(changeByAmount(Number(changeAmount) || 0))
+            }
+        >
+            asd
+        </button>
+
+
+        </div>
+
+
+</>
     );
 }
+
+

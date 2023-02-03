@@ -24,35 +24,16 @@ const root = document.getElementById('root');
 // );
 ReactDOM.render(
     <BrowserRouter>
-
         <Provider store={store}>
 
         <App>
-            <Switch>
-            {/*<Route>*/}
+            <Switch>{/*<Route>*/}
                 <Route path={appConstants.productRoute} component={Product}/>
-                {/*<Route path={appConstants.namesRoute} component={Names}/>*/}
-                {/*<Route path={appConstants.summeryRoute} component={Summery}/>*/}
-                {/*<Route path={appConstants.Add_Summery} component={AddSummery}/>*/}
-
-            {/*</Route>*/}
             </Switch>
         </App>
-
-
-
         </Provider>
     </BrowserRouter>
- // <>
- //    <App>
- //
- //
- //    </App>
- // </>
     ,root
-  //     <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
 );
 
 
