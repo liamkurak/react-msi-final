@@ -39,8 +39,7 @@ export const  Counter = () => {
             >
                 Decrement
             </button>
-
-
+            
             {/*<input*/}
             {/*    className={styles.textbox}*/}
             {/*    aria-label="Set increment amount"*/}
