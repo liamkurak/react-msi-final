@@ -9,10 +9,25 @@ const Header = () =>{
     return(
         <header>
             <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
-                <a href='#' className="navbar-brand">Pet GiuGiu</a>
+                <a href='/' className="navbar-brand">Pet GiuGiu</a>
                 <ul className="nav navbar-nav">
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.productRoute}> Product </NavLink>
+                        <NavLink className="nav-link" to={appConstants.loginRoute}> Page1  </NavLink>
+                    </li>
+                    <li><b>|</b></li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>
+                    </li>
+                    <li><b>|</b></li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.loginRoute}> Page3 </NavLink>
+                    </li>
+                    <li><b>|</b></li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>
                     </li>
                     <li><b>|</b></li>
 

@@ -1,8 +1,8 @@
 export const appConstants = {
     // Route paths
     namesRoute: '/names',
-    productRoute: '/products',
-    loginProductRoute: '/login',
+    reactCounterRouter: '/counter',
+    loginRoute: '/login',
 
     // actions
     ADD_NAME: 'ADD_NAME',

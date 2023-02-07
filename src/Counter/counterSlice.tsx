@@ -22,7 +22,12 @@ export const counterSlice = createSlice({
             }
         },
         changeByAmount: (state,action) => {
-            state.value = action.payload;
+            if(action.payload >= 0)
+                state.value = action.payload;
+        },
+
+        incrementByAmount: (state, action) => {
+            state.value += action.payload
         },
     },
 });
@@ -31,3 +36,9 @@ export const counterSlice = createSlice({
 export const {increment, decrement, changeByAmount } = counterSlice.actions;
 
 export default counterSlice.reducer;
+
+// export const incrementAsync = (amount:any) => (dispatch:any) => {
+//     setTimeout(() => {
+//         dispatch(counterSlice.incrementByAmount(amount))
+//     }, 1000)
+// }

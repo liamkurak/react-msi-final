@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 
 import Header from "./header/Header";
+import Names from "./names/Names";
 
-import logo from './logo.svg';
-import { Counter } from './Counter/Counter';
 
 
 class App extends React.Component<AppProps, AppState>{
@@ -13,16 +12,13 @@ class App extends React.Component<AppProps, AppState>{
         <>
             <main>
             <Header/>
+            {/*<Names/>*/}
             {this.props.children}
-
         </main>
-
         </>
     );
-
   }
 }
-
 
 
 export default App;
