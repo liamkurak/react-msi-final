@@ -3,10 +3,11 @@ import Name from "./name/Name";
 import css from './Names.module.scss';
 import {Counter} from "../Counter/Counter";
 
-const Names = (pros: any) =>{
+
+const Names = (props: NamesProps) =>{
 // const Names = (pros: any) =>{
 
-    const names = ['Liam','Rayna','Charlie','names list'];
+
     return(
         // <Name/>
         <div className={css.Names}>
@@ -14,14 +15,13 @@ const Names = (pros: any) =>{
             {/*<Name name = 'B' children={'children B'}/>*/}
             {/*<Name name = 'C' children={'children C'}/>*/}
             {
-               names.map((n: string) => (
+               props.names.map((n: string) => (
                 <Name name = { n } key={ n }>
                       {/*There is children props*/}
                     {Math.round(Math.random()* 120 ).toString()}
+
                 </Name>
-
                 ))
-
             }
 
 
@@ -44,5 +44,6 @@ export default Names;
 
 interface NamesProps{
     names: string[]
-    children: string[];
+    // children: string[];
+    children: any;
 }

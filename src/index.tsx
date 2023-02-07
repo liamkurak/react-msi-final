@@ -15,6 +15,7 @@ import store from './app/store'
 import { Provider } from 'react-redux'
 import {Login} from "./products/Login";
 import Names from "./names/Names";
+import {Shop} from "./products/shop";
 
 
 const root = document.getElementById('root');
@@ -30,6 +31,7 @@ ReactDOM.render(
                 <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
                 <Route path={appConstants.loginRoute} component={Login}/>
                 <Route path={appConstants.namesRoute} component={Names}/>
+                <Route path={appConstants.shopRoute} component={Shop}/>
             </Switch>
         </App>
         </Provider>
