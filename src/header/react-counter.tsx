@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../logo.svg";
-import {Counter} from "../Counter/Counter";
+import {Counter} from "../Component/Counter/Counter";
 
 export const ReactCounter = () => {
     return(

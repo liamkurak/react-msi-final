@@ -17,7 +17,7 @@ const Header = () =>{
                     <li><b>|</b></li>
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.loginRoute}> Page1  </NavLink>
+                        <NavLink className="nav-link" to={appConstants.PageRoute}> Page1  </NavLink>
                     </li>
                     <li><b>|</b></li>
 
@@ -27,7 +27,12 @@ const Header = () =>{
                     <li><b>|</b></li>
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.loginRoute}> Page3 </NavLink>
+                        <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
+                    </li>
+                    <li><b>|</b></li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.productsRoute}> Product </NavLink>
                     </li>
                     <li><b>|</b></li>
 

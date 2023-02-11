@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../Counter/counterSlice';
+import counterReducer from '../Component/Counter/counterSlice';
 
 
 // Redux Steps 1: configureStore从 Redux Toolkit导入API
