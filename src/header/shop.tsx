@@ -16,11 +16,11 @@ export const Shop = (pros:any) => {
                 {/*this is Name children*/}
                 <Counter/>
           </Name>
-          <Names names={['shop1','shop2','shop3']}>
-                this is Names children
-                this is Names children
-                <Counter/>
-          </Names>
+          {/*<Names names={['shop1','shop2','shop3']}>*/}
+          {/*      this is Names children*/}
+          {/*      this is Names children*/}
+          {/*      <Counter/>*/}
+          {/*</Names>*/}
       </>
     );
 }

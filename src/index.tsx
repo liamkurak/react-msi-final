@@ -18,8 +18,12 @@ import Names from "./Component/names/Names";
 import {Shop} from "./Header/shop";
 import Products from "./Component/products/Products";
 import AddName from "./Component/names/add-name/AddName";
+import {createStore} from "@reduxjs/toolkit";
+import {rootReducer} from "./reducers/root.reducer";
+import {names} from "./reducers/names.reducer";
 
-const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
+//move names[] to reducers!
+// const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
 
 const products = [
     // tslint:disable-next-line:max-line-length
@@ -44,12 +48,13 @@ const addName = (newName: string)=> {
 const root = document.getElementById('root');
 ReactDOM.render(
     <BrowserRouter>
-        <Provider store={store}>
+        <Provider store={createStore(rootReducer)}>
         <App>
             <Switch>
                  {/*eslint-disable-next-line react/jsx-no-undef */}
                 <Route path={appConstants.addNameRoute} component={()=><AddName addName={addName}/>} />
-                <Route path={appConstants.namesRoute} component={()=><Names names={names}/>}/>
+                {/*<Route path={appConstants.namesRoute} component={()=><Names names={names} children={''}/>}/>*/}
+                <Route path={appConstants.namesRoute} component={Names}/>
                 <Route path={appConstants.productsRoute} component={() =><Products products ={products}/>}/>
                 <Route path={appConstants.shopRoute} component={Shop}/>
                 <Route path={appConstants.loginRoute} component={Login}/>
