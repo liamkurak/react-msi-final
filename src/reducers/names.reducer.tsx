@@ -1,4 +1,3 @@
-import {appConstants} from "../Header/appConstants";
 
 export const names = ['Liam','Rayna','Charlie','Using Reducer now'];
 // set default value of state to names.

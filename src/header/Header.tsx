@@ -11,10 +11,7 @@ const Header = () =>{
             <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
                 <a href='/' className="navbar-brand">Pet GiuGiu</a>
                 <ul className="nav navbar-nav">
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.shopRoute}> Shop  </NavLink>
-                    </li>
-                    <li><b>|</b></li>
+
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>
@@ -33,6 +30,11 @@ const Header = () =>{
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
+                    </li>
+                    <li><b>|</b></li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.shopRoute}> Shop  </NavLink>
                     </li>
                     <li><b>|</b></li>
 

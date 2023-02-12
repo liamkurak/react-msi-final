@@ -37,6 +37,7 @@ export const {increment, decrement, changeByAmount } = counterSlice.actions;
 
 export default counterSlice.reducer;
 
+
 // export const incrementAsync = (amount:any) => (dispatch:any) => {
 //     setTimeout(() => {
 //         dispatch(counterSlice.incrementByAmount(amount))
