@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom'; //  this only for v18
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {appConstants} from "./Header/appConstants";
-import {ReactCounter} from "./Header/react-counter";
+import {ReactCounter} from "./Component/Counter/react-counter";
 
 // Redux Steps 2 imports 然后用Provider（类工厂）创建模式 然后将store作为props传入
 import store from './app/store'
@@ -17,22 +17,43 @@ import {Login} from "./Header/Login";
 import Names from "./Component/names/Names";
 import {Shop} from "./Header/shop";
 import Products from "./Component/products/Products";
+import AddName from "./Component/names/add-name/AddName";
 
+const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
+
+const products = [
+    // tslint:disable-next-line:max-line-length
+    { name: 'iPhone', brand: 'Apple', price: 100, stock: 22, image: 'https://d2um6umu4gwssp.cloudfront.net/apple/wp-content/uploads/2016/06/iphone-1.jpg'},
+    { name: 'iPhone3G', brand: 'Apple', price: 200, stock: 33, image: 'https://cdn.mos.cms.futurecdn.net/005cd70c02c2c8bd7b07d3cfeca82a3a.jpg'},
+    { name: 'iPhone3GS', brand: 'Apple', price: 300, stock: 11, image: 'https://technabob.com/blog/wp-content/uploads/2009/06/iphone_3gs.jpg'},
+    { name: 'iPhone4', brand: 'Apple', price: 400, stock: 22, image:'https://d2um6umu4gwssp.cloudfront.net/apple/wp-content/uploads/2016/06/iphone-1.jpg'},
+    { name: 'iPhone4S', brand: 'Apple', price: 500, stock: 33, image: 'https://d2um6umu4gwssp.cloudfront.net/apple/wp-content/uploads/2016/06/iphone-1.jpg'},
+    { name: 'iPhone5', brand: 'Apple', price: 600, stock: 11, image: 'https://d2um6umu4gwssp.cloudfront.net/apple/wp-content/uploads/2016/06/iphone-1.jpg'},
+    { name: 'iPhone5C', brand: 'Apple', price: 700, stock: 222, image: 'https://www.notebookcheck.net/uploads/tx_nbc2/N48-Blue.jpg'},
+    { name: 'iPhone5S', brand: 'Apple', price: 800, stock: 333, image: 'https://d2um6umu4gwssp.cloudfront.net/apple/wp-content/uploads/2016/06/iphone-1.jpg'},
+    { name: 'iPhone6', brand: 'Apple', price: 900, stock: 111, image: 'https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP705/SP705-iphone_6-mul.png'}
+];
+
+
+const addName = (newName: string)=> {
+    names.push(newName);
+    // *? why use forceUpdate to update state? cannot directly updates states?
+    // this.forceUpdate();
+};
 
 const root = document.getElementById('root');
-// const root = ReactDOM.createRoot(
-//     document.getElementById('root') as HTMLElement
-// );
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={store}>
         <App>
-            <Switch>{/*<Route>*/}
-                <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
-                <Route path={appConstants.loginRoute} component={Login}/>
-                <Route path={appConstants.namesRoute} component={Names}/>
+            <Switch>
+                 {/*eslint-disable-next-line react/jsx-no-undef */}
+                <Route path={appConstants.addNameRoute} component={()=><AddName addName={addName}/>} />
+                <Route path={appConstants.namesRoute} component={()=><Names names={names}/>}/>
+                <Route path={appConstants.productsRoute} component={() =><Products products ={products}/>}/>
                 <Route path={appConstants.shopRoute} component={Shop}/>
-                <Route path={appConstants.productsRoute} component={Products}/>
+                <Route path={appConstants.loginRoute} component={Login}/>
+                <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
             </Switch>
         </App>
         </Provider>

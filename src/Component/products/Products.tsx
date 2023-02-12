@@ -10,7 +10,6 @@ class Products extends Component<any, any>{
         // TODO: if already has products in redux store, do not fetch it again
         // this.props.getproducts;
     }
-
     render() {
         return(
             <table className="table table-bordered table-striped ">
@@ -38,19 +37,14 @@ class Products extends Component<any, any>{
                             <td>{p.stock}</td>
                             <td><img width = "100px" height="80px" src={p.image} alt={p.name}/></td>
                         </tr>
-                    )
-                    )
+                    ))
                 }
-
-                {console.log('props: is :', this.props.children)}
-
                 </tbody>
             </table>
-        );
-    }
+        );}
 }
 export default Products;
-//
+
 // // destructuring ->  ES6.tx 1/13 11:53
 // // const {products} = reduxState; -> {products}
 // // function mapStateToProps(reduxState:ReduxStateModel){
@@ -63,7 +57,8 @@ export default Products;
 // export default connect(mapStateToProps,{getProducts})(Products);
 //
 // interface ProdudctProps{
-//     products: ProductModel [] | null,
+//     products: any,
+//     // products: ProductModel [] | null,
 //     getProducts: () => {};
 // };
 //

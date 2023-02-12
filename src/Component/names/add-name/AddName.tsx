@@ -1,27 +1,19 @@
 import {Component, SyntheticEvent} from "react";
-import {connect} from "react-redux";
-import {bindActionCreators, Dispatch} from "redux";
+// import {connect} from "react-redux";
+// import {bindActionCreators, Dispatch} from "redux";
 // import {addName} from "../../../actions/names.action";
 
 
-class AddName extends Component<AddNameProps, AddNameState>{
-/*  every component has a state object
-    which is used to do state management
+// class AddName extends Component<AddNameProps, AddNameState>{
+class AddName extends Component<any, any>{
 
- */
     state = {
         newName: ''
     };
+
     newName: string = 'Default Value';
-    // regular fn, ES5 fn
-    //In Child component, receive data through props
     changeHandler = ((event: SyntheticEvent)=>{
-
         const newName  = (event.target as HTMLInputElement).value;
-        // this.render();
-        // will force react to re-render
-        // this.forceUpdate();
-
         // we call setState to update state
         this.setState({
             // newName: newName
@@ -31,22 +23,24 @@ class AddName extends Component<AddNameProps, AddNameState>{
     submitHandler = (event: any)=>  {
         // **** SyntheticEvent
         //          -> stopPropagation(),preventDefault()
-        //  a cross-browser wrapper around the browser’s native event. except the events work identically across all browsers.
-        //这是一个围绕浏览器的本机事件的跨浏览器包装器。它与浏览器的本机事件具有相同的界面，包括stopPropagation()和preventDefault()，除了事件在所有浏览器中的工作方式相同。
-
         event.preventDefault();
-
+        // *? why use this?
         this.props.addName(this.state.newName);
     };
 
     render(){
-        //
         return(
-            // onSubmit -> listen event
             <form onSubmit={this.submitHandler} className="form-group">
-                <input value={this.state.newName} onChange={this.changeHandler} className="form-control" type = "text"/>
-                <button className="btn btn-dark">Add Name </button>
+                <input
+                    value={this.state.newName}
+                    onChange={this.changeHandler}
+                    className="form-control"
+                    type = "text"
+                />
+                <button className="btn btn-dark"> Add Name </button>
+                {/*{console.log('props: is :', this.state)}*/}
             </form>
+
         );
     }
 }
@@ -64,13 +58,13 @@ class AddName extends Component<AddNameProps, AddNameState>{
 export default AddName;
 
 
-interface AddNameProps{
-    // addName: (newName: string) => void;
-    addName: (newName: string) => {};
-}
-interface AddNameState{
-    newName: string
-}
+// interface AddNameProps{
+//     // addName: (newName: string) => void;
+//     addName: (newName: string) => {};
+// }
+// interface AddNameState{
+//     newName: string
+// }
 
 /*
 why we use  event.preventDefault(); ?

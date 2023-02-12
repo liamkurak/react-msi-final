@@ -17,22 +17,22 @@ const Header = () =>{
                     <li><b>|</b></li>
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.PageRoute}> Page1  </NavLink>
-                    </li>
-                    <li><b>|</b></li>
-
-                    <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>
                     </li>
                     <li><b>|</b></li>
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
+                        <NavLink className="nav-link" to={appConstants.ADD_NAME}> Add Name </NavLink>
                     </li>
                     <li><b>|</b></li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.productsRoute}> Product </NavLink>
+                    </li>
+                    <li><b>|</b></li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
                     </li>
                     <li><b>|</b></li>
 
