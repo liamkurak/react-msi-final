@@ -52,12 +52,6 @@ class AddProduct extends Component<any, any>{
         event.preventDefault();
         this.props.addProduct(this.state.product);
 
-        // ()=>{
-        //     this.setState({msg: 'added successfully'})
-        // },
-        // ()=>{
-        //     this.setState({msg: 'added failed'})
-        // };
     };
 
     render() {
@@ -88,19 +82,13 @@ class AddProduct extends Component<any, any>{
                <input className="form-contr " value={this.state.product.price} name="price" onChange={this.inputChangeHandlder} placeholder="Price" type = 'number'/>
                <input className="form-contr " value={this.state.product.stock} name="stock" onChange={this.inputChangeHandlder} placeholder="Stock" type = 'number'/>
                <input className="form-contr " value={this.state.product.image} name="image" onChange={this.inputChangeHandlder} placeholder="Image" type = 'text'/>
-               { /*
 
-                 */ }
-
-               {/*!!!Q: what is btn success*/}
                 <button className="btn btn-success">Add Product</button>
            </form>
-
         );
     }
 };
 
-// ae k shu s
 export default AddProduct;
 
 // !!! 15:28  how to create redux? -> Redux Store -> AddName -> ActionCreator -> actionObj -> Reducers -> Redux Store

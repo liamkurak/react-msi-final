@@ -48,11 +48,13 @@ React Component:
   以及`<button>` tag的submitHanderler
 
      * state = {newName: ' '}
-     * `<input>`
-     * value = {this.state.newName}
-     * onChange = {this.changeHandler}
+     * `<input>` tag
+       ```
+       value = {this.state.newName}
+       onChange = {this.changeHandler}
+       ```
      * changeHandler:
-     *  ```JavaScript
+        ```JavaScript
         const newName = (event.target as HTMLInputElement).value;
         this.setState({
           newName: newName

@@ -16,8 +16,8 @@ class App extends React.Component<AppProps, AppState>{
   render() {
     return (
         <>
+        <Header/>
         <main>
-            <Header/>
             {this.props.children}
             {/*<AddName addName={this.addName}/>*/}
             {/*<Names names={names}/>*/}

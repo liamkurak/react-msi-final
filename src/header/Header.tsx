@@ -16,27 +16,27 @@ const Header = () =>{
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>
                     </li>
-                    <li><b>|</b></li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.ADD_NAME}> Add Name </NavLink>
                     </li>
-                    <li><b>|</b></li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.productsRoute}> Product </NavLink>
                     </li>
-                    <li><b>|</b></li>
+
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>
+                    </li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
                     </li>
-                    <li><b>|</b></li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>
                     </li>
-                    <li><b>|</b></li>
 
                 </ul>
             </nav>
