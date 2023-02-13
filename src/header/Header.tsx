@@ -34,11 +34,6 @@ const Header = () =>{
                     <li><b>|</b></li>
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.shopRoute}> Shop  </NavLink>
-                    </li>
-                    <li><b>|</b></li>
-
-                    <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>
                     </li>
                     <li><b>|</b></li>

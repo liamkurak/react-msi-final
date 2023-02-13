@@ -51,7 +51,7 @@ ReactDOM.render(
             <Switch>
                 <Route path={appConstants.addNameRoute} component={()=><AddName addName={addName}/>} />
                 <Route path={appConstants.namesRoute} component={Names}/>
-                <Route path={appConstants.productsRoute} component={() =><Products products ={products}/>}/>
+                <Route path={appConstants.productsRoute} component={Products}/>
                 <Route path={appConstants.loginRoute} component={Login}/>
                 <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
             </Switch>

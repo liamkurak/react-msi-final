@@ -20,20 +20,21 @@ const products = [
 export const productsReducer = (state = products, action: ProductsReducerAction ) => {
 // export const productsReducer = (state: ProductModel[] | null = null, action: ProductsReducerAction ) => {
     // idk somehwo state = null -> 1/13 16:46
-    switch(action.type){
-        case appConstants.ADD_PRODUCT:
-            // return state ? [...state, action.payload] : [action.payload];
-            // return state ? [...state, (action.payload.data as  {product: ProductModel, success: boolean} ).product] : state;
-            return state ? [...state, (action.payload.data as  ProductResponse).product] : state;
-            //return state ? [...state, action.payload] : 'if state is null, return whatever, null, state(null), [action.payload]';
-        case appConstants.GET_PRODUCTS:
-            // payload: AxiosResponse is {data: [], status, ..]
-            return (action.payload as AxiosResponse).data;
-        default:
+//     switch(action.type){
+//         case appConstants.ADD_PRODUCT:
+//             // return state ? [...state, action.payload] : [action.payload];
+//             // return state ? [...state, (action.payload.data as  {product: ProductModel, success: boolean} ).product] : state;
+//             return state ? [...state, (action.payload.data as  ProductResponse).product] : state;
+//             //return state ? [...state, action.payload] : 'if state is null, return whatever, null, state(null), [action.payload]';
+//         case appConstants.GET_PRODUCTS:
+//             // payload: AxiosResponse is {data: [], status, ..]
+//             return (action.payload as AxiosResponse).data;
+//         default:
+//             return state;
+//
+// // !!! 16:50 lifeclcey
+//     }
             return state;
-
-// !!! 16:50 lifeclcey
-    }
 // //     default case is 'return state'
 //     return state;
 };

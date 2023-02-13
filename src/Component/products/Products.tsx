@@ -1,7 +1,8 @@
 import React,{Component} from "react";
 import {Link} from "react-router-dom";
 import {appConstants} from "../../Header/appConstants";
-
+import {ReduxStateModel} from "../../shared/models/ReduxStateModel";
+import {connect} from "react-redux";
 
 // class Products extends Component<ProdudctProps, ProdudctState>{
 class Products extends Component<any, any>{
@@ -43,25 +44,26 @@ class Products extends Component<any, any>{
             </table>
         );}
 }
-export default Products;
+// export default Products;
 
-// // destructuring ->  ES6.tx 1/13 11:53
-// // const {products} = reduxState; -> {products}
-// // function mapStateToProps(reduxState:ReduxStateModel){
-// function mapStateToProps({products}: ReduxStateModel){
-//     // syntax sugar of key value pair: return {products: products};
-//     return {products};
-// }
-//
-// // export default connect(mapStateToProps)(Products);
+// *?* what is destracture??
+// destructuring ->  ES6.tx 1/13 11:53
+// const {products} = reduxState; -> {products}
+// function mapStateToProps(reduxState:ReduxStateModel){
+function mapStateToProps({products}: ReduxStateModel){
+    // syntax sugar of key value pair: return {products: products};
+    return {products};
+}
+
+// export default connect(mapStateToProps)(Products);
 // export default connect(mapStateToProps,{getProducts})(Products);
-//
-// interface ProdudctProps{
-//     products: any,
-//     // products: ProductModel [] | null,
-//     getProducts: () => {};
-// };
-//
-// interface ProdudctState{
-//
-// };
+export default connect(mapStateToProps)(Products);
+
+interface ProdudctProps{
+    products: any,
+    // products: ProductModel [] | null,
+    getProducts: () => {};
+};
+
+interface ProdudctState{
+};

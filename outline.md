@@ -98,116 +98,37 @@ React Component:
     * actions -> `ADD_NAME: 'ADD_NAME'`
 
 
+  ## make it Reducer way
+  * `index`
+    * change `component={()=>{}}` to `component={}`
+  * `products` -> create mapStateToProps & export with connect() 
+      ```JavaScript
+      // destructuring ->  ES6.tx 1/13 11:53
+      // const {products} = reduxState; -> {products}
+      // function mapStateToProps(reduxState:ReduxStateModel){
+      function mapStateToProps({products}: ReduxStateModel){
+      // syntax sugar of key value pair: return {products: products};
+        return {products};
+      }
+      export default connect(mapStateToProps)(Products);
+      ```
+  * `products.reducer`
+     ```Java
+      export const productsReducer = (state = products, action: ProductsReducerAction ) => {
+        return state;
+      };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-
-
-
-# Ticket System
-  * 1. Movies
-      * Filter / Sort By
-        * Name
-        * Genre
-        * Rating
-        * Release Date
-    
-      * Movie info
-        * Name
-        * Runtime
-        * Release Date
-        * Genre
-        * rating
-        * Cast & Crew
-
-  * Reservation Check
-    * check your appointment 
-  * 2. Food & Drinks
-  * 3. Rewards
-  * 4. Account
-    * a. Sign in OR Create 
-
-
-
-## login with diffrent auth
-  * Editing
-    * CRUD
-      * add, delete
-
-
-
-
-
-
-
-
-# Final Project
-
-农业系统
-* 1. 每日计划
-* 2. 仓库
-* 3. 账单
-* 4. 管理员
-
-
-        Core Feature Sets, - farm management - group orders - book keeping - market place (equipment sellers and service providers)
-
-
-
-播种系统：
-        - plant
-          -> stock --, if 0 , shows RED out of stock
-
-
-
-# Hotel System
-
-  * 1. Booking
+      interface ProductsReducerAction{
+        type: string;
+      // payload: ProductModel | AxiosResponse;
+      // payload: AxiosResponse <ProductModel | AxiosResponse>;
+        payload: AxiosResponse <ProductModel | {product: ProductModel, success: boolean}>;
+      }
+      ```
+  * and add it to `root.reducer`
+      ```Java 
+      products: productsReducer
+      ```
+      
    
-    * Search:
-      * Destination
-      * Check-in date
-      * Check-out date
-      * Guests
-    
-    * Filter:
-      * Rating/ price
 
-    * hotels table
-
-  * 2. 
-
- -->
