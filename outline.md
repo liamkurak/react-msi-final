@@ -129,6 +129,5 @@ React Component:
       ```Java 
       products: productsReducer
       ```
-      
-   
+    
 
