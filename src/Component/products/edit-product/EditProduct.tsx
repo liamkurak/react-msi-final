@@ -1,6 +1,6 @@
 import {Component} from "react";
 import {RouteComponentProps} from "react-router-dom";
-import {Formik} from "formik";
+// import {Formik} from "formik";
 
 // class EditProduct extends Component<any, any>{
 class EditProduct extends Component<EditProductProps, EditProductState>{

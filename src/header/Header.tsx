@@ -12,6 +12,9 @@ const Header = () =>{
                 <a href='/' className="navbar-brand">Pet GiuGiu</a>
                 <ul className="nav navbar-nav">
 
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.page1Route}> Page1 </NavLink>
+                    </li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>

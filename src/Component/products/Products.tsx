@@ -4,8 +4,8 @@ import {appConstants} from "../../Header/appConstants";
 import {ReduxStateModel} from "../../shared/models/ReduxStateModel";
 import {connect} from "react-redux";
 
-// class Products extends Component<ProdudctProps, ProdudctState>{
-class Products extends Component<any, any>{
+class Products extends Component<ProdudctProps, ProdudctState>{
+// class Products extends Component<any, any>{
 
     componentDidMount() {
         // TODO: if already has products in redux store, do not fetch it again

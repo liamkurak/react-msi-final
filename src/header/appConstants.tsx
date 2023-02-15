@@ -4,7 +4,7 @@ export const appConstants = {
     reactCounterRouter: '/counter',
     loginRoute: '/login',
     shopRoute: '/shop',
-    PageRoute: '/page1',
+    page1Route: '/page1',
 
     productsRoute: '/products',
     addNameRoute: '/add-name',

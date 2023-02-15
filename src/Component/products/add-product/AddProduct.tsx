@@ -1,7 +1,6 @@
 
 import React from 'react';
 import {Component, SyntheticEvent} from "react";
-import {connect} from "react-redux";
 import {appConstants} from "../../../Header/appConstants";
 
 class AddProduct extends Component<any, any>{

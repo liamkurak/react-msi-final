@@ -1,7 +1,6 @@
 // import {ProductModel} from "../shared/models/ProductModel";
 // import {appConstants} from "../shared/constants/constant";
 import {AxiosResponse} from "axios";
-import {appConstants} from "../Header/appConstants";
 import {ProductModel} from "../shared/models/ProductModel";
 
 const products = [
@@ -46,7 +45,7 @@ interface ProductsReducerAction{
     payload: AxiosResponse <ProductModel | {product: ProductModel, success: boolean}>;
 }
 
-interface ProductResponse{
-    product: ProductModel,
-    success: boolean
-}
+// interface ProductResponse{
+//     product: ProductModel,
+//     success: boolean
+// }
