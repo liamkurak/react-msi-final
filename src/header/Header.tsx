@@ -13,6 +13,10 @@ const Header = () =>{
                 <ul className="nav navbar-nav">
 
                     <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.homeRoute}> Home </NavLink>
+                    </li>
+
+                    <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.page1Route}> Page1 </NavLink>
                     </li>
 

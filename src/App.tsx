@@ -14,6 +14,7 @@ class App extends React.Component<AppProps, AppState>{
     // };
 
   render() {
+
     return (
         <>
         <Header/>
@@ -23,6 +24,7 @@ class App extends React.Component<AppProps, AppState>{
             {/*<Names names={names}/>*/}
             {/*<Products products ={products}/>*/}
         </main>
+
         </>
     );
   }
