@@ -8,7 +8,11 @@ const HomePage = (props:any) => {
     const [item, setItem] = useState(Data);
 
     // const menuItems = [...new Set(Data.map((Val) => Val.category))];
-    const menuItems = Data.map((Val) => Val.category);
+    // const menuItems = Data.map((Val) => Val.category);
+
+    const lst = ['Breakfast','Lunch','Dinner','Snakes'];
+    const menuItems = lst;
+
     const filterItem = (curcat:any) => {
         const newItem = Data.filter((newVal) => {
             return newVal.category === curcat;
