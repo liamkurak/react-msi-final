@@ -4,7 +4,8 @@ import Data from "./Data";
 const Filters = ({ filterItem, setItem, menuItems }:any) => {
     return (
         <>
-        <div className="d-flex justify-content-center">
+        <div>
+        {/*<div className="d-flex justify-content-center">*/}
             {menuItems.map((Val:any, id:any) => {
                 return (
                     <button
