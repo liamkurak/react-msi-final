@@ -12,7 +12,6 @@ import {ReactCounter} from "./Component/Counter/react-counter";
 
 // Redux Steps 2 imports 然后用Provider（类工厂）创建模式 然后将store作为props传入
 import { Provider } from 'react-redux'
-import {Login} from "./Header/Login";
 import Names from "./Component/names/Names";
 import Products from "./Component/products/Products";
 import {createStore} from "@reduxjs/toolkit";
@@ -22,6 +21,7 @@ import AddProduct from "./Component/products/add-product/AddProduct";
 import EditProduct from "./Component/products/edit-product/EditProduct";
 import Page1 from "./Component/Page1/Page1";
 import HomePage from "./Component/home/HomePage";
+import Login from "./Component/login/Login";
 
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];

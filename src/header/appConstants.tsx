@@ -18,6 +18,8 @@ export const appConstants = {
     ADD_PRODUCT: 'ADD_PRODUCT',
     GET_PRODUCTS:'GET_PRODUCTS',
 
+    LOGIN: 'LOGIN',
+
 
     PRODUCT_FIELDS: [
         {
