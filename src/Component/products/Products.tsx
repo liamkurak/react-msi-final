@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {Link} from "react-router-dom";
-import {appConstants} from "../../Header/appConstants";
+import {appConstants} from "../../headers/appConstants";
 import {ReduxStateModel} from "../../shared/models/ReduxStateModel";
 import {connect} from "react-redux";
 

@@ -3,7 +3,7 @@
 
 // for there state is state
 import {AxiosResponse} from "axios";
-import {appConstants} from "../Header/appConstants";
+import {appConstants} from "../headers/appConstants";
 
 export const authReducer = (state = null, action: ActionType) => {
     switch (action.type){

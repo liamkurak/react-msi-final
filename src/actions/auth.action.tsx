@@ -1,7 +1,7 @@
 import {UserModel} from "../shared/models/UserModel";
 import axios from "axios";
 import qs from 'qs';
-import {appConstants} from "../Header/appConstants";
+import {appConstants} from "../headers/appConstants";
 
 export const login = (user:UserModel, succeed:()=>void, fail:()=>void) => {
        console.log(qs.stringify(user));

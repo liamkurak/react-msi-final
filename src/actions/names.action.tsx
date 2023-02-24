@@ -1,4 +1,4 @@
-import {appConstants} from "../Header/appConstants";
+import {appConstants} from "../headers/appConstants";
 
 export const addName = (newName: string) => {
     return {

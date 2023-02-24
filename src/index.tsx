@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'; //  this only for v18
 // use ReactDOM.render, BrowserRouter,Switch
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {appConstants} from "./Header/appConstants";
+import {appConstants} from "./headers/appConstants";
 import {ReactCounter} from "./Component/Counter/react-counter";
 
 // Redux Steps 2 imports 然后用Provider（类工厂）创建模式 然后将store作为props传入

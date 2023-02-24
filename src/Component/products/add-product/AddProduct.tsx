@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Component, SyntheticEvent} from "react";
-import {appConstants} from "../../../Header/appConstants";
+import {appConstants} from "../../../headers/appConstants";
 
 class AddProduct extends Component<any, any>{
 // class AddProduct extends Component<AddProductProps, AddProductState>{

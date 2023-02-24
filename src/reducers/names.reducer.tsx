@@ -1,4 +1,4 @@
-import {appConstants} from "../Header/appConstants";
+import {appConstants} from "../headers/appConstants";
 
 export const names = ['Liam','Rayna','Charlie','Using Reducer now'];
 // set default value of state to names.

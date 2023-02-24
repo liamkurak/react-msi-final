@@ -2,7 +2,7 @@ import {ProductModel} from "../shared/models/ProductModel";
 
 import axios, {AxiosResponse} from "axios";
 import {Action} from "redux";
-import {appConstants} from "../Header/appConstants";
+import {appConstants} from "../headers/appConstants";
 
 
 export const addProduct = (product: ProductModel, succeed:() =>void, fail:() => void) => {
