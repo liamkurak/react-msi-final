@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Header from "./Header/Header";
+import GetData from "./Component/GetData/GetData";
+
 
 
 class App extends React.Component<AppProps, AppState>{
@@ -13,7 +15,9 @@ class App extends React.Component<AppProps, AppState>{
     //     this.forceUpdate();
     // };
 
-  render() {
+
+
+    render() {
 
     return (
         <>
@@ -24,6 +28,9 @@ class App extends React.Component<AppProps, AppState>{
             {/*<Names names={names}/>*/}
             {/*<Products products ={products}/>*/}
         </main>
+
+            {/*get date:{GetData}*/}
+            {/*{console.log( GetData)}*/}
 
         </>
     );

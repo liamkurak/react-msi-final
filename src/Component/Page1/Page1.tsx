@@ -1,19 +1,14 @@
 import React from "react";
 import css from "./Page1.module.scss";
 import Products from "../products/Products";
-import Card from "../home/Card";
 
 const Page1 = () => {
-
 
     return(
         <React.Fragment>
             <body>
-
-
             <h1>  <label>BOsOKS</label>  </h1>
             <div className={css.wrapper}>
-
                 <div>
                 {/*<div className={css.two}>*/}
                     {/*<form className="inner_grid" onChange12="return checker()" action="http://echo-4131.herokurapp.com/" method="post">*/}
@@ -103,20 +98,10 @@ const Page1 = () => {
                     </div>
                 </div>
 
-
     {/*--------------------2nd grid------------------------------*/}
 
-
-
-
             </div>
-
         </body>
-
-            {/*<Card item = {null}/>*/}
-
-
-
         </React.Fragment>
     );
 }

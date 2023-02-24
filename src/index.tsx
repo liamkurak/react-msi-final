@@ -22,6 +22,7 @@ import EditProduct from "./Component/products/edit-product/EditProduct";
 import Page1 from "./Component/Page1/Page1";
 import HomePage from "./Component/home/HomePage";
 import Login from "./Component/login/Login";
+import GetDate from "./Component/GetData/GetData";
 
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
@@ -52,6 +53,8 @@ ReactDOM.render(
 
                 <Route path={appConstants.loginRoute} component={Login}/>
                 <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
+
+                <Route path={appConstants.page2Route} component={GetDate}/>
             </Switch>
         </App>
         </Provider>

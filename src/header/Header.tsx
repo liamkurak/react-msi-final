@@ -45,6 +45,10 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>
                     </li>
 
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.page2Route}> Test_GetData </NavLink>
+                    </li>
+
                 </ul>
             </nav>
         </header>

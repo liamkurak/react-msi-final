@@ -7,6 +7,8 @@ export const appConstants = {
     page1Route: '/page1',
     homeRoute: '/home',
 
+    page2Route: '/page2',
+
     productsRoute: '/products',
     addNameRoute: '/add-name',
     addProductRoute: '/add-product',

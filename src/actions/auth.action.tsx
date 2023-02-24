@@ -6,7 +6,8 @@ import {appConstants} from "../Header/appConstants";
 export const login = (user:UserModel, succeed:()=>void, fail:()=>void) => {
        console.log(qs.stringify(user));
    const loginPromise = axios.post<{success: boolean}>(
-       `${process.env.REACT_APP_API}/login`,
+       // `${process.env.REACT_APP_API}/login`,
+       `http://localhost:8080/samples/age`,
        qs.stringify(user), // -> convert user to string
        // user
        /*
