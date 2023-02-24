@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Page1.module.scss";
 import Products from "../products/Products";
+import Card from "../home/Card";
 
 const Page1 = () => {
 
@@ -109,7 +110,13 @@ const Page1 = () => {
 
 
             </div>
+
         </body>
+
+            {/*<Card item = {null}/>*/}
+
+
+
         </React.Fragment>
     );
 }

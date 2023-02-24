@@ -2,7 +2,9 @@ import {UserModel} from "../shared/models/UserModel";
 import axios from "axios";
 import qs from 'qs';
 import {appConstants} from "../Header/appConstants";
+
 export const login = (user:UserModel, succeed:()=>void, fail:()=>void) => {
+       console.log(qs.stringify(user));
    const loginPromise = axios.post<{success: boolean}>(
        `${process.env.REACT_APP_API}/login`,
        qs.stringify(user), // -> convert user to string

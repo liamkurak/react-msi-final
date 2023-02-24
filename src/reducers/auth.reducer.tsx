@@ -15,7 +15,6 @@ export const authReducer = (state = null, action: ActionType) => {
     }
 }
 
-
 interface ActionType {
     type: string;
     payload: AxiosResponse<{success: boolean, user?: {}}>

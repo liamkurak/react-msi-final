@@ -5,36 +5,16 @@ import UsernameIcon from "@material-ui/icons/Person";
 import PasswordIcon from "@material-ui/icons/VpnKey";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import LoginIcon from '@material-ui/icons/FilterHdr';
-import {inspect} from "util";
-import {RouteComponentProps} from "react-router-dom";
-import {StyledComponentProps} from "@mui/material";
+
 import {useDispatch} from "react-redux";
 import {login} from "../../actions/auth.action";
 
 const styles = {
-
-// root: {
-//     marginTop:'25px''& .MuiInput-underline:before': {borderBottomColor: 'white
-//     & .MuiInput-underline:after': {
-//         borderBottomCoor: 'white
-
 };
-
 /* *?* what is functional component?
     React 16.8
     what is jsx() ?
-
-
  */
-// const Login = () => {
-//     return(
-//         <>
-//             Login functional
-//         </>
-//     );
-// }
-
-
 
 const Login = (props: any) => {
 
@@ -96,7 +76,6 @@ const Login = (props: any) => {
                     }}
                 />
 
-
                 <TextField
                     name="password"
                     className={classes?.root}
@@ -136,15 +115,7 @@ export default withStyles(styles)(Login);
 
 
 // export default Login;
-
-
 // interface  LoginProps extends StyledComponentProps, RouteComponentProps{}
-
-
-
-
-
-
 
 
 // import * as React from 'react';
