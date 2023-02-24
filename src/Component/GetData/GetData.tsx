@@ -8,16 +8,15 @@ function GetDate() {
 
     async function f() {
         let response = await fetch(
-            // "https://1c104v13x0.execute-api.us-east-1.amazonaws.com/v1/counter",
             "http://localhost:8080/samples/age/40",
             {
                 method: 'GET',
                 // mode: 'cors',
-                cache: 'no-cache',
+                // cache: 'no-cache',
                 // credentials: 'omit',
-                // headers: { 'Content-Type': 'text/plain', },
-                headers: { 'Content-Type': 'application/json', },                redirect: 'follow',
-                referrerPolicy: 'no-referrer'
+                headers: { 'Content-Type': 'application/json'},
+                // redirect: 'follow',
+                referrerPolicy: 'no-referrer',
                 // body: body && JSON.stringify(body)
             }
         )
@@ -30,14 +29,18 @@ function GetDate() {
             f()
                 .then(
                     (resolved_result)=>{
-                        setData(resolved_result)
+                        console.log('resolved_result: ',resolved_result);
+                        console.log(resolved_result[0].age)
+                        setData(resolved_result[0].age)
+
                     }
-                ).catch(
-                (failed_result)=>{
-                    console.log('something wrong');
-                    console.log(failed_result);
-                }
-            )
+                )
+                .catch(
+                    (failed_result)=>{
+                        console.log('something wrong');
+                        console.log(failed_result);
+                    }
+                )
         }, []
     )
 
