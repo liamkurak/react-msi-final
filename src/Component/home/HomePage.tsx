@@ -2,19 +2,23 @@ import React, {useState} from "react";
 import Data from "./Data";
 import Filters from "./FIlters";
 import Card from "./Card";
+import Data2 from "./Data2";
+import CardPet from "./CardPet";
+import Data3 from "./Data3";
 
 const HomePage = (props:any) => {
 
-    const [item, setItem] = useState(Data);
+    const [item, setItem] = useState(Data3);
 
     // const menuItems = [...new Set(Data.map((Val) => Val.category))];
     // const menuItems = Data.map((Val) => Val.category);
 
-    const lst = ['Breakfast','Lunch','Dinner','Snakes'];
-    const menuItems = lst;
+    // const lst = ['Breakfast','Lunch','Dinner','Snakes','Wet Food'];
+    const lst2 = ['Cat','Dog'];
+    const menuItems = lst2;
 
     const filterItem = (curcat:any) => {
-        const newItem = Data.filter((newVal) => {
+        const newItem = Data3.filter((newVal) => {
             return newVal.category === curcat;
         });
         setItem(newItem);
@@ -30,7 +34,7 @@ const HomePage = (props:any) => {
                         setItem={setItem}
                         menuItems={menuItems}
                     />
-                    <Card item={item} />
+                    <CardPet item={item} />
                 </div>
             </div>
 

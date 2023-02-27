@@ -6,8 +6,9 @@ const Page1 = () => {
 
     return(
         <React.Fragment>
+{/*<HomePage></HomePage>*/}
             <body>
-            <h1>  <label>BOsOKS</label>  </h1>
+            <h1>  <label>BOOKS</label>  </h1>
             <div className={css.wrapper}>
                 <div>
                 {/*<div className={css.two}>*/}

@@ -1,11 +1,11 @@
 const Data = [
     {
         id: "1",
-        title: "Poha",
-        category: "Breakfast",
-        price: "$1",
-        img: "https://c.ndtvimg.com/2021-08/loudr2go_aloo-poha_625x300_05_August_21.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350",
-        desc: " Poha. Light, filling and easy to make, poha is one famous breakfast that is eaten almost everywhere in the country. And the best part is- it can be made in a number of ways. Kanda poha, soya poha, Indori poha, Nagpur Tari Poha are a few examples",
+        title: "Fancy Feast® All Life Stages Cat Wet Food",
+        category: "Wet Food",
+        price: "$0.86",
+        img: "https://s7d2.scene7.com/is/image/PetSmart/1221061?$CLEARjpg$",
+        desc: "Satisfy your cat's cravings for meaty goodness when you serve Purina Fancy Feast Classic Pate Tender Beef & Liver Feast wet cat food.",
     },
     {
         id: "2",
