@@ -35,6 +35,7 @@ const Data = [
         img: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3958_Main_VE_Cat_FD-DinnerPatties_Rabbit_21.png?v=1613056994',
         img2: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3958_Back_VE_Cat_FD-DinnerPatties_Rabbit_Rev00_21.png?v=1616703404',
     },
+
     {
         id: 4,
         name: "Freeze-Dried Minnows Cat Treats",
@@ -94,6 +95,19 @@ const Data = [
         desc:'It’s duck season! Freeze-dried duck dog food fuels your dog’s wellbeing with raw, natural nutrition. ',
         img: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3648_Main_VE_Dog_FD-MiniNibs_Turkey_21_1.png?v=1654084382',
         img2: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3648_Back_VE_Dog_FD-MiniNibs_Turkey_Rev00_21_1.png?v=1654084382',
+    },
+
+    {
+        id: 9,
+        name: "Freeze Dried Beef Meal Toppers",
+        brand: 'VITAL ESSENTIALS',
+        category: 'Topper',
+        productsType: 'Topper',
+        price: '14.49',
+        Weight: '6 oz',
+        desc:'This chicken dog/cat food topper is filled with the natural nutrition of real meat.',
+        img: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3617_Main_VE_Dog_FD-Toppers_Chicken_21_1.png?v=1656530006',
+        img2: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3617_Back_VE_Dog_FD-Toppers_Chicken_Rev00_21.png?v=1656530006',
     },
 
 ]

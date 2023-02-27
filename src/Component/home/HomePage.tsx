@@ -14,7 +14,7 @@ const HomePage = (props:any) => {
     // const menuItems = Data.map((Val) => Val.category);
 
     // const lst = ['Breakfast','Lunch','Dinner','Snakes','Wet Food'];
-    const lst2 = ['Cat','Dog'];
+    const lst2 = ['Cat','Dog','Topper'];
     const menuItems = lst2;
 
     const filterItem = (curcat:any) => {
