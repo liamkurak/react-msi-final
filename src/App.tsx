@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from "./headers/Header";
+import {Counter} from "./Component/Counter/Counter";
 
 
 
@@ -27,7 +28,6 @@ class App extends React.Component<AppProps, AppState>{
             {/*<Names names={names}/>*/}
             {/*<Products products ={products}/>*/}
         </main>
-
             {/*get date:{GetData}*/}
             {/*{console.log( GetData)}*/}
 

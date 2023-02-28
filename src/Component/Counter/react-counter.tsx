@@ -1,8 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
 import logo from "../../logo.svg";
 import {Counter} from "./Counter";
 
 export const ReactCounter = () => {
+// export class ReactCounter extends Component<any,any>{
+
+    // render(){
+
     return(
         <>
             <div className='App'>
@@ -53,4 +57,5 @@ export const ReactCounter = () => {
             </div>
         </>
     );
+    // }
 }

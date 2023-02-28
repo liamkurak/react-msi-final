@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom'; //  this only for v18
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {appConstants} from "./headers/appConstants";
-import {ReactCounter} from "./Component/Counter/react-counter";
 
 // Redux Steps 2 imports 然后用Provider（类工厂）创建模式 然后将store作为props传入
 import { Provider } from 'react-redux'
@@ -24,6 +23,7 @@ import HomePage from "./Component/home/HomePage";
 import Login from "./Component/login/Login";
 import GetDate from "./Component/GetData/GetData";
 import Detail from "./Component/home/details/Detail";
+import {ReactCounter} from "./Component/Counter/react-counter";
 
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
@@ -39,6 +39,7 @@ const root = document.getElementById('root');
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={createStore(rootReducer)}>
+        {/*<Provider store={contersReducer}>*/}
         <App>
             <Switch>
                 {/*<Route path={appConstants.addNameRoute} component={()=><AddName addName={addName}/>} />*/}
@@ -55,9 +56,10 @@ ReactDOM.render(
                 <Route path={appConstants.page1Route} component={Page1}/>
 
                 <Route path={appConstants.loginRoute} component={Login}/>
-                <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
 
                 <Route path={appConstants.page2Route} component={GetDate}/>
+
+                <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
             </Switch>
         </App>
         </Provider>

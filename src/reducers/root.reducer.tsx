@@ -2,6 +2,7 @@ import {combineReducers} from "redux";
 import {namesReducer} from "./names.reducer";
 import {productsReducer} from "./products.reducer";
 import {authReducer} from "./auth.reducer";
+import counterReducer from "../Component/Counter/counterSlice";
 
 export const rootReducer = combineReducers({
     // key - value pair
@@ -12,4 +13,5 @@ export const rootReducer = combineReducers({
 
     //day5 part 1 47:42
     user: authReducer,
+    counter: counterReducer,
 });
