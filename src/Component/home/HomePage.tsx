@@ -1,8 +1,5 @@
 import React, {useState} from "react";
-import Data from "./Data";
 import Filters from "./FIlters";
-import Card from "./Card";
-import Data2 from "./Data2";
 import CardPet from "./CardPet";
 import Data3 from "./Data3";
 
@@ -19,7 +16,7 @@ const HomePage = (props:any) => {
 
     const filterItem = (curcat:any) => {
         const newItem = Data3.filter((newVal) => {
-            return newVal.category === curcat;
+            return newVal.category === curcat ||  newVal.category === 'Topper';
         });
         setItem(newItem);
     };
@@ -28,13 +25,19 @@ const HomePage = (props:any) => {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <h1 className="col-12 text-center my-3 fw-bold">Food Filtering App</h1>
+                    <h1 className="col-12 text-center my-3 fw-bold">All Dog & Cat Products</h1>
+                    <div>
+                        <br/>
+                        <br/>
+                    </div>
+
                     <Filters
                         filterItem={filterItem}
                         setItem={setItem}
                         menuItems={menuItems}
                     />
                     <CardPet item={item} />
+                    <img src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/collections/VE_LS_DogCat_Shopify_Collection_1920x250_1-21.png?v=1641834574'}/>
                 </div>
             </div>
 

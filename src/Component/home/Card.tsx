@@ -21,7 +21,6 @@ const Card = ({item}:any) => {
 //             desc: " A quintessential South Indian Breakfast! Made with protein-packed urad dal and semolina followed by crunchy veggies and curd, this recipe makes for a hearty morning meal. With some grated coconut on top, it gives a beautiful south-Indian flavour.",
 //         }]
 //     const item = Data;
-
     return (
         <>
             <div className="container-fluid">

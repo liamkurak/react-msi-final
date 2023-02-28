@@ -15,6 +15,8 @@ export const appConstants = {
     editProductRoute: '/edit-product',
     loginProductRoute: '/login',
 
+    detailRoute: '/detail',
+
     // actions
     ADD_NAME: 'ADD_NAME',
     ADD_PRODUCT: 'ADD_PRODUCT',

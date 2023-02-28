@@ -1,4 +1,6 @@
 import React from "react";
+import {appConstants} from "../../headers/appConstants";
+import {Link} from "react-router-dom";
 
 const CardPet = ({item}:any) => {
 
@@ -17,11 +19,17 @@ const CardPet = ({item}:any) => {
                                 </div>
 
                                 <div className="card-body">
-                                    <div className="card-title fw-bold fs-4">
-                                        {val.name} &nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;
-                                        {val.price}
+                                    <div className="card-title fw-bold fs-5">
+                                        <Link
+                                            to={`${appConstants.detailRoute}/${val.id}`}
+                                        >
+                                            <td>{val.name}</td>
+                                        </Link>
+                                        {/*{val.name}*/}
+                                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                        $ {val.price}
                                     </div>
-                                    <div>Package Size: {val.Weight}</div>
+                                    <div>Package Size: {val.weight}</div>
                                     <div className="card-text">{val.desc}</div>
                                 </div>
                             </div>
