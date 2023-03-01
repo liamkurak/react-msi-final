@@ -1,10 +1,10 @@
 import React from "react";
-import {Counter} from "../Counter/Counter";
-import styles from "../Counter/Counter.module.css";
-import Data from "../home/Data3";
-import css from "../Page1/Page1.module.scss";
+import {Counter} from "../../Counter/Counter";
+import styles from "../../Counter/Counter.module.css";
+import Data from "../Data3";
+import css from "../../Page1/Page1.module.scss";
 import {useSelector} from "react-redux";
-import {selectCount} from "../Counter/counterSlice";
+import {selectCount} from "../../Counter/counterSlice";
 
 const Cart = () => {
 
@@ -67,7 +67,8 @@ const Cart = () => {
                 <div>
                     <p><b>ORDER SUMMERY</b></p>
 
-                    <h5>Subtotal: {sum.toFixed(2)}  </h5>
+                    <h5><b>Items:</b> {item.brand} x {count} </h5>
+                    <h5><b>Subtotal:</b> ${sum.toFixed(2)}  </h5>
 
                     <button
                         className={styles.CHECKOUT}

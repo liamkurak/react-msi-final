@@ -24,7 +24,8 @@ import Login from "./Component/login/Login";
 import GetDate from "./Component/GetData/GetData";
 import Detail from "./Component/home/details/Detail";
 import {ReactCounter} from "./Component/Counter/react-counter";
-import Cart from "./Component/cart/Cart";
+import Cart from "./Component/home/cart/Cart";
+import Checkout from "./Component/home/checkout/Checkout";
 
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
@@ -63,6 +64,7 @@ ReactDOM.render(
                 <Route path={appConstants.reactCounterRouter} component={ReactCounter}/>
 
                 <Route path={appConstants.cartRoute} component={Cart}/>
+                <Route path={appConstants.checkoutRoute} component={Checkout}/>
             </Switch>
         </App>
         </Provider>

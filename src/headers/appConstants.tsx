@@ -17,6 +17,7 @@ export const appConstants = {
 
     detailRoute: '/detail',
     cartRoute: '/cart',
+    checkoutRoute: '/checkout',
 
     // actions
     ADD_NAME: 'ADD_NAME',

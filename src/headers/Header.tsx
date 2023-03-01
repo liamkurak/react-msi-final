@@ -12,14 +12,6 @@ const Header = () =>{
                 <a href='/' className="navbar-brand">Pet GiuGiu</a>
                 <ul className="nav navbar-nav">
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.homeRoute}> Home </NavLink>
-                    </li>
-
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.page1Route}> Page1 </NavLink>
-                    </li>
-
                     {/*<li className="nav-item">*/}
                     {/*    <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>*/}
                     {/*</li>*/}
@@ -49,6 +41,15 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.page2Route}> Test_GetData </NavLink>
                     </li>
 
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.page1Route}> &nbsp; &nbsp; &nbsp; &nbsp;  Home </NavLink>
+                    </li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.homeRoute}> Shop </NavLink>
+                    </li>
+
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.detailRoute}> Detail </NavLink>
                     </li>
@@ -57,6 +58,9 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.cartRoute}> Cart </NavLink>
                     </li>
 
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.checkoutRoute}> Checkout </NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>
