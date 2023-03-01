@@ -20,22 +20,22 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.page1Route}> Page1 </NavLink>
                     </li>
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>*/}
+                    {/*</li>*/}
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.ADD_NAME}> Add Name </NavLink>
                     </li>
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.productsRoute}> Product </NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink className="nav-link" to={appConstants.productsRoute}> Product </NavLink>*/}
+                    {/*</li>*/}
 
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>*/}
+                    {/*</li>*/}
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>

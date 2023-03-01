@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import {RouteComponentProps} from "react-router-dom";
 import css from "../../Page1/Page1.module.scss";
 import Data from "../Data3";
+import {Counter} from "../../Counter/Counter";
+import styles from "../../Counter/Counter.module.css";
+import {decrement} from "../../Counter/counterSlice";
 // import {Formik} from "formik";
 
 // class Detail extends Component<DetailProps, DetailState>{
@@ -16,7 +19,7 @@ class Detail extends Component<any, any>{
             //     {/*something here*/}
             // </Formik>
         <body>
-        <h1>  <label>item detail</label>  </h1>
+        <h1>  <label> </label>  </h1>
         <div className={css.wrapper} >
 
 
@@ -27,7 +30,7 @@ class Detail extends Component<any, any>{
             </div>
 
             {/*========== 222222222 ==========*/}
-            <div>
+            <div className='text-center'>
                 <h5><b>{item.name}</b></h5>
                 <p><b>{item.category} Food</b></p>
                 {/*TODO: Reviews */}
@@ -36,14 +39,20 @@ class Detail extends Component<any, any>{
                 <p>{item.desc}</p>
                 <p><b>Package Size:</b> {item.weight}</p>
                 {/*TODO: AddToCart*/}
-                AddToCart
-                <p>
-                    <button>+</button>
-                    <input  type="number"  />
-                    <button>-</button>
-                </p>
+                    <Counter/>
 
+
+                <p>
+                    <button
+                        className={styles.AddToCart}
+                        onClick={() => {}}
+                    >
+                        AddToCart
+
+                    </button>
+                </p>
             </div>
+
 
 
             {/*=========== 333333333 ===========*/}

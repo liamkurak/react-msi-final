@@ -42,9 +42,8 @@ export const Counter = () => {
                 >
                     -
                 </button>
-            </div>
 
-            <div className={styles.row}>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input
                     className={styles.textbox}
                     aria-label="Set increment amount"
@@ -59,6 +58,10 @@ export const Counter = () => {
                 >
                     Change Amount
                 </button>
+            </div>
+
+            <div className={styles.row}>
+
 
             </div>
         </>
