@@ -53,6 +53,10 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.detailRoute}> Detail </NavLink>
                     </li>
 
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.cartRoute}> Cart </NavLink>
+                    </li>
+
                 </ul>
             </nav>
         </header>

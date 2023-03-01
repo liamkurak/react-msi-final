@@ -16,6 +16,7 @@ export const appConstants = {
     loginProductRoute: '/login',
 
     detailRoute: '/detail',
+    cartRoute: '/cart',
 
     // actions
     ADD_NAME: 'ADD_NAME',
