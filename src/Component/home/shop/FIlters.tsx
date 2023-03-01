@@ -1,5 +1,5 @@
 import React from "react";
-import Data3 from "./Data3";
+import Data3 from "../Data3";
 
 const Filters = ({ filterItem, setItem, menuItems }:any) => {
     return (

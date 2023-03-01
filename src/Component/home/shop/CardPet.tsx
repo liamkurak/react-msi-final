@@ -1,5 +1,5 @@
 import React from "react";
-import {appConstants} from "../../headers/appConstants";
+import {appConstants} from "../../../headers/appConstants";
 import {Link} from "react-router-dom";
 
 const CardPet = ({item}:any) => {
