@@ -44,7 +44,7 @@ const Data = [
         productsType: 'Treat',
         price: '6.49',
         weight: '0.5 oz',
-        desc:'Experience the minnow cat treat craze! There’s a reason our award-winning freeze-dried minnows are so popular. ',
+        desc:'Experience the minnow cat treat craze! There’s a reason our award-winning freeze-dried minnows are so popular.',
         img: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3755_Main_VC_Cat_FD_Treats_Minnows.png?v=1650254530',
         img2: 'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/products/3755_Back_VC_Cat_FD_Treats_Minnows.png?v=1649995741',
     },

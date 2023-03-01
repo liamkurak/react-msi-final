@@ -1,16 +1,13 @@
 import React, {useState} from "react";
-import Filters from "./details/FIlters";
-import CardPet from "./details/CardPet";
-import Data3 from "./Data3";
+import Filters from "./FIlters";
+import CardPet from "./CardPet";
+import Data3 from "../Data3";
 
 const Shop = (props:any) => {
-
     const [item, setItem] = useState(Data3);
-
     // const menuItems = [...new Set(Data.map((Val) => Val.category))];
     // const menuItems = Data.map((Val) => Val.category);
 
-    // const lst = ['Breakfast','Lunch','Dinner','Snakes','Wet Food'];
     const lst2 = ['Cat','Dog','Topper'];
     const menuItems = lst2;
 
@@ -26,11 +23,6 @@ const Shop = (props:any) => {
             <div className="container-fluid">
                 <div className="row">
                     <h1 className="col-12 text-center my-3 fw-bold">All Dog & Cat Products</h1>
-                    <div>
-                        <br/>
-                        <br/>
-                    </div>
-
                     <Filters
                         filterItem={filterItem}
                         setItem={setItem}

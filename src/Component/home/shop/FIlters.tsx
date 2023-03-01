@@ -4,7 +4,6 @@ import Data3 from "../Data3";
 const Filters = ({ filterItem, setItem, menuItems }:any) => {
     return (
         <>
-        {/*<div>*/}
         <div className="d-flex justify-content-center">
             {menuItems.map((Val:any, id:any) => {
                 return (

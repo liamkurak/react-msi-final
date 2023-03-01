@@ -18,7 +18,6 @@ import {rootReducer} from "./reducers/root.reducer";
 import AddName from "./Component/names/add-name/AddName";
 import AddProduct from "./Component/products/add-product/AddProduct";
 import EditProduct from "./Component/products/edit-product/EditProduct";
-import Page1 from "./Component/Page1/Page1";
 import HomePage from "./Component/home/HomePage";
 import Login from "./Component/login/Login";
 import GetDate from "./Component/GetData/GetData";
@@ -26,6 +25,7 @@ import Detail from "./Component/home/details/Detail";
 import {ReactCounter} from "./Component/Counter/react-counter";
 import Cart from "./Component/home/cart/Cart";
 import Checkout from "./Component/home/checkout/Checkout";
+import Shop from "./Component/home/shop/Shop";
 
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
@@ -46,7 +46,7 @@ ReactDOM.render(
             <Switch>
                 {/*<Route path={appConstants.addNameRoute} component={()=><AddName addName={addName}/>} />*/}
                 <Route path={appConstants.addNameRoute} component={AddName} />
-                <Route path={appConstants.homeRoute} component={HomePage}/>
+                <Route path={appConstants.shopRoute} component={Shop}/>
 
                 <Route path={appConstants.namesRoute} component={Names}/>
                 <Route path={appConstants.productsRoute} component={Products}/>
@@ -55,7 +55,7 @@ ReactDOM.render(
                 <Route path={`${appConstants.detailRoute}/:name`} component={Detail}/>
 
 
-                <Route path={appConstants.page1Route} component={Page1}/>
+                <Route path={appConstants.homePageRoute} component={HomePage}/>
 
                 <Route path={appConstants.loginRoute} component={Login}/>
 

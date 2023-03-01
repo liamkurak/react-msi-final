@@ -43,11 +43,11 @@ const Header = () =>{
 
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.page1Route}> &nbsp; &nbsp; &nbsp; &nbsp;  Home </NavLink>
+                        <NavLink className="nav-link" to={appConstants.homePageRoute}> &nbsp; &nbsp; &nbsp; &nbsp;  Home </NavLink>
                     </li>
 
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.homeRoute}> Shop </NavLink>
+                        <NavLink className="nav-link" to={appConstants.shopRoute}> Shop </NavLink>
                     </li>
 
                     <li className="nav-item">

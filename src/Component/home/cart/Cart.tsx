@@ -2,28 +2,24 @@ import React from "react";
 import {Counter} from "../../Counter/Counter";
 import styles from "../../Counter/Counter.module.css";
 import Data from "../Data3";
-import css from "../../Page1/Page1.module.scss";
+import css from "../Page1.module.scss";
 import {useSelector} from "react-redux";
 import {selectCount} from "../../Counter/counterSlice";
+import {Link} from "react-router-dom";
+import {appConstants} from "../../../headers/appConstants";
 
 const Cart = () => {
 
     const item = Data[0];
 
     const count = useSelector(selectCount);
-
     const sum = +(item.price) * count;
 
     return(
-
             <>
                 <h1 className='text-center'>YOUR CART </h1>
-
-
                 <h5> Product</h5>
-
             <div className={css.cart_wrapper} >
-
                         <div className={css.wrapper} >
 
                             {/*========= 111111111 =============*/}
@@ -31,7 +27,6 @@ const Cart = () => {
                                 <img className="card-img-top text-center" src={item.img}/>
 
                             </div>
-
 
                             {/*========== 222222222 ==========*/}
                             <div className='text-center'>
@@ -45,23 +40,13 @@ const Cart = () => {
                                 {/*TODO: AddToCart*/}
                                 <Counter/>
 
-
                                 <p>
-                                    <button
-                                        className={styles.AddToCart}
-                                        onClick={() => {}}
-                                    >
-                                        AddToCart
-
-                                    </button>
+                                    {+window.location.pathname[8]-1}
+                                    {window.location.pathname}
                                 </p>
+
                             </div>
-
-
                         </div>
-
-
-
 
                     {/*========== Summary =========*/}
                 <div>
@@ -70,20 +55,16 @@ const Cart = () => {
                     <h5><b>Items:</b> {item.brand} x {count} </h5>
                     <h5><b>Subtotal:</b> ${sum.toFixed(2)}  </h5>
 
-                    <button
-                        className={styles.CHECKOUT}
-                        onClick={() => {}}
-                    >
-                        PROCEED TO CHECKOUT
-                    </button>
-
+                    <Link to={`${appConstants.checkoutRoute}`}>
+                        <button className={styles.CHECKOUT}>
+                            PROCEED TO CHECKOUT
+                        </button>
+                    </Link>
                 </div>
-
 
             </div>
             </>
     );
 }
-
 
 export default Cart;
