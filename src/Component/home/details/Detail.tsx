@@ -34,7 +34,7 @@ class Detail extends Component<any, any>{
                 <p><b>Package Size:</b> {item.weight}</p>
                     <Counter/>
                 <p>
-                    <Link to={`${appConstants.cartRoute}`}>
+                    <Link to={`${appConstants.cartRoute}/${item.id}`}>
                         <button className={styles.AddToCart}>
                             AddToCart
                         </button>

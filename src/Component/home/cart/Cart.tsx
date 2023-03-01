@@ -10,7 +10,8 @@ import {appConstants} from "../../../headers/appConstants";
 
 const Cart = () => {
 
-    const item = Data[0];
+    // const item = Data[0];
+    const item = Data[+window.location.pathname[6]-1];
 
     const count = useSelector(selectCount);
     const sum = +(item.price) * count;
@@ -40,11 +41,6 @@ const Cart = () => {
                                 {/*TODO: AddToCart*/}
                                 <Counter/>
 
-                                <p>
-                                    {+window.location.pathname[8]-1}
-                                    {window.location.pathname}
-                                </p>
-
                             </div>
                         </div>
 
@@ -53,7 +49,7 @@ const Cart = () => {
                     <p><b>ORDER SUMMERY</b></p>
 
                     <h5><b>Items:</b> {item.brand} x {count} </h5>
-                    <h5><b>Subtotal:</b> ${sum.toFixed(2)}  </h5>
+                    <h5><b>Subtotal:</b> ${sum.toFixed(2)} </h5>
 
                     <Link to={`${appConstants.checkoutRoute}`}>
                         <button className={styles.CHECKOUT}>
