@@ -25,8 +25,8 @@ const CardPet = ({item}:any) => {
                                         >
                                             <td>{val.name}</td>
                                         </Link>
-                                        {/*{val.name}*/}
-                                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                        {/*&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;*/}
+                                        <br/>
                                         $ {val.price}
                                     </div>
                                     <div>Package Size: {val.weight}</div>

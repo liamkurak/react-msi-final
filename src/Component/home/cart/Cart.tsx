@@ -8,6 +8,7 @@ import {selectCount} from "../../Counter/counterSlice";
 import {Link} from "react-router-dom";
 import {appConstants} from "../../../headers/appConstants";
 
+
 const Cart = () => {
 
     // const item = Data[0];
@@ -41,6 +42,8 @@ const Cart = () => {
                     </div>
 
                 </div>
+
+
             </>
         );
     }

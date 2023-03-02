@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from "./headers/Header";
-import {Counter} from "./Component/Counter/Counter";
-
-
 
 class App extends React.Component<AppProps, AppState>{
 // class App extends React.Component<any, any>{
@@ -15,27 +12,15 @@ class App extends React.Component<AppProps, AppState>{
     //     this.forceUpdate();
     // };
 
-
-
     render() {
-
     return (
         <>
-        <Header/>
-        <main>
-            {this.props.children}
-            {/*<AddName addName={this.addName}/>*/}
-            {/*<Names names={names}/>*/}
-            {/*<Products products ={products}/>*/}
-        </main>
-            {/*get date:{GetData}*/}
-            {/*{console.log( GetData)}*/}
-
+            <Header/>
+            <main> {this.props.children} </main>
         </>
     );
   }
 }
-
 
 export default App;
 
