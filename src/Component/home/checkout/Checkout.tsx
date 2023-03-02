@@ -7,6 +7,7 @@ const Checkout = () => {
             <img
                 src={'https://cdn.shopify.com/s/files/1/0472/5922/2175/files/Vital_Essentials_Logo_Horizontal_Primary_ClearBG_web_2019.png?7334'}
                 width= '300px'
+                alt={'vital Essentials'}
             />
             <div className={css.wrapper} >
 

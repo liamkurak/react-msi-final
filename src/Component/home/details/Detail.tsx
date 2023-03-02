@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link, RouteComponentProps} from "react-router-dom";
+import {Link} from "react-router-dom";
 import css from "../Page1.module.scss";
 import Data from "../Data3";
 import {Counter} from "../../Counter/Counter";
@@ -19,7 +19,7 @@ class Detail extends Component<any, any>{
         <div className={css.wrapper} >
             {/*========= 111111111 =============*/}
             <div>
-                <img className="card-img-top text-center" src={item.img}/>
+                <img className="card-img-top text-center" src={item.img} alt={item.productsType}/>
 
             </div>
 
@@ -86,7 +86,7 @@ class Detail extends Component<any, any>{
 export default Detail;
 
 // interface DetailProps extends RouteComponentProps<{id:string}> {
-interface DetailProps extends RouteComponentProps<{any:any}> {
-}
-interface DetailState{
-}
+// interface DetailProps extends RouteComponentProps<{any:any}> {
+// }
+// interface DetailState{
+// }

@@ -27,6 +27,7 @@ const Cart = () => {
                         {/*========= 111111111 =============*/}
                         <div>
                             <img className="card-img-top text-center" src={'https://static.vecteezy.com/system/resources/previews/005/006/007/original/no-item-in-the-shopping-cart-click-to-go-shopping-now-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg'}
+                                 alt={'empty cart'}
                             />
                         </div>
                         <div> <h1> Oops! Your Cart is empty</h1> </div>
@@ -57,7 +58,7 @@ const Cart = () => {
 
                     {/*========= 111111111 =============*/}
                     <div>
-                        <img className="card-img-top text-center" src={item?.img}/>
+                        <img className="card-img-top text-center" src={item?.img} alt={item.productsType}/>
 
                     </div>
 

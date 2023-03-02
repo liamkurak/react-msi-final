@@ -29,7 +29,10 @@ const Shop = (props:any) => {
                         menuItems={menuItems}
                     />
                     <CardPet item={item} />
-                    <img src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/collections/VE_LS_DogCat_Shopify_Collection_1920x250_1-21.png?v=1641834574'}/>
+                    <img
+                        src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/collections/VE_LS_DogCat_Shopify_Collection_1920x250_1-21.png?v=1641834574'}
+                        alt={'Pet Shop foot pic'}
+                    />
                 </div>
             </div>
 

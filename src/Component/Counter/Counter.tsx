@@ -8,7 +8,7 @@ import {
     increment,
     changeByAmount,
     selectCount,
-    incrementAsync,
+    // incrementAsync,
 } from './counterSlice'
 
 import styles from './Counter.module.css'
