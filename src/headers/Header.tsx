@@ -28,9 +28,9 @@ const Header = () =>{
                     {/*</li>*/}
 
 
-                    {/*<li className="nav-item">*/}
-                    {/*    <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>*/}
-                    {/*</li>*/}
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>
+                    </li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
@@ -44,10 +44,8 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.page2Route}> Test_GetData </NavLink>
                     </li>
 
-
                     {/*=============================*/}
                     {/*=============================*/}
-
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.homePageRoute}> &nbsp; &nbsp; &nbsp; &nbsp;  Home </NavLink>
                     </li>

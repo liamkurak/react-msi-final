@@ -4,8 +4,14 @@ import {Link} from "react-router-dom";
 
 const CardPet = ({item}:any) => {
 
+    const  blackTest1 ={
+            'color': "red",
+            'text-decoration': "none"
+    }
+
     return (
         <>
+
             <div className="container-fluid">
                 <div className="row justify-content-center">
                     {item.map((val:any) => {
@@ -21,10 +27,30 @@ const CardPet = ({item}:any) => {
                                 <div className="card-body">
                                     <div className="card-title fw-bold fs-5">
                                         <Link
+                                            className="nav-link"
                                             to={`${appConstants.detailRoute}/${val.id}`}
                                         >
                                             <td>{val.name}</td>
                                         </Link>
+
+                                        <Link
+                                            style ={blackTest1}
+                                            to={`${appConstants.detailRoute}/${val.id}`}
+                                        >
+                                            <td>12323{val.name}</td>
+                                        </Link>
+
+
+                                        <style>{
+                                            `
+                                            .blackTest{
+                                                color: black;
+                                                text-decoration: none; 
+                                            }
+                                            `
+                                        }
+                                        </style>
+
                                         {/*&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;*/}
                                         <br/>
                                         $ {val.price}

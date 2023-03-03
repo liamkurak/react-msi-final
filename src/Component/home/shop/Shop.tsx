@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import Filters from "./FIlters";
 import CardPet from "./CardPet";
 import Data3 from "../Data3";
+import {NavLink} from "react-router-dom";
+import {appConstants} from "../../../headers/appConstants";
 
 const Shop = (props:any) => {
     const [item, setItem] = useState(Data3);
@@ -22,6 +24,12 @@ const Shop = (props:any) => {
         <>
             <div className="container-fluid">
                 <div className="row">
+                    <p>
+                        <NavLink to={appConstants.homePageRoute}>Home </NavLink>
+                        &gt; Products
+                    </p>
+
+
                     <h1 className="col-12 text-center my-3 fw-bold">All Dog & Cat Products</h1>
                     <Filters
                         filterItem={filterItem}

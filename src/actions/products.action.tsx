@@ -35,7 +35,6 @@ export const getProducts = () => {
     //         () => fail()
     //     );
 
-
     return{
         type: appConstants.GET_PRODUCTS,
         payload: getProductsPromise,

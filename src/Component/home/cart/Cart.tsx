@@ -5,7 +5,7 @@ import Data from "../Data3";
 import css from "../Page1.module.scss";
 import {useSelector} from "react-redux";
 import {selectCount} from "../../Counter/counterSlice";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {appConstants} from "../../../headers/appConstants";
 
 
@@ -51,6 +51,15 @@ const Cart = () => {
 
     return(
         <>
+            <p>
+                <NavLink
+                    // className="nav-link"
+                    to={appConstants.homePageRoute}>Home </NavLink>
+                &gt;
+                <NavLink to={appConstants.shopRoute}> Products </NavLink>
+                &gt; View Cart
+            </p>
+
             <h1 className='text-center'>YOUR CART </h1>
             <h5> Product</h5>
             <div className={css.cart_wrapper} >

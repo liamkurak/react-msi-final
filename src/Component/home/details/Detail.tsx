@@ -1,10 +1,11 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import css from "../Page1.module.scss";
 import Data from "../Data3";
 import {Counter} from "../../Counter/Counter";
 import styles from "../../Counter/Counter.module.css";
 import {appConstants} from "../../../headers/appConstants";
+import Products from "../../products/Products";
 // import {Formik} from "formik";
 
 // class Detail extends Component<DetailProps, DetailState>{
@@ -15,7 +16,25 @@ class Detail extends Component<any, any>{
         const item = Data[+window.location.pathname[8]-1];
         return (
         <body>
-        <h1>  <label> </label>  </h1>
+
+        <p>
+            <NavLink
+                // className="nav-link"
+                to={appConstants.homePageRoute}>Home </NavLink>
+            &gt;
+            <NavLink to={appConstants.shopRoute}> Products </NavLink>
+            &gt; Detailas
+        </p>
+
+        {/*================*/}
+        {/*================*/}
+        {/*================*/}
+
+
+
+        {/*================*/}
+        {/*================*/}
+
         <div className={css.wrapper} >
             {/*========= 111111111 =============*/}
             <div>
@@ -60,23 +79,79 @@ class Detail extends Component<any, any>{
             </div>
 
             {/*========== 444444444 ===========*/}
-            <div>
+            <div className={css.reviews}>
                 {/*TODO:CUSTOMER REVIEWS*/}
                 <h1>Customer Reviews</h1>
-                <p><b>ever consistent</b></p>
+                <p><b>Makes breakfast taste like dessert!</b></p>
                 <p>
-                    I have been purchasing the chicken dinner patties for a few years on and off . I usually purchase from chewy and the order comes fast . This order took a long time . The patties are not the same as the last several bags . These are dark and bloody and the cats don’t like them . Maybe your quality control needs some looking at or the processing. The reason for on and off purchase is because the food is inconsistent. Our cats either love them or hate them ,and this batch is bad !
+                    My puppy usually ignores breakfast, until I started adding Vital Essentials Beef Topper to his food. He starts jumping out of excitement and gobbles it all up! This topper is a great way to add in some additional protein and get your pets excited to eat!
                 </p>
 
                 <img
-                    src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/files/P_Header_Products_Cat_Mobile_2x_f38aa5a8-37f0-457f-babf-372719b5c140_1024x1024_crop_center.png?v=1614338209'}
+                    // src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/files/P_Header_Products_Cat_Mobile_2x_f38aa5a8-37f0-457f-babf-372719b5c140_1024x1024_crop_center.png?v=1614338209'}
+                    src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/dcdn.aitrillion.com/ai-review/jxjhP8Kiqelhc2y0-GbOAOr5cOV148hE81LluK9MJTQ/1651242543vitalessentials_2.jpg'}
                     width={'400px'}
                     alt={'Dog Treats'}
                 />
             </div>
 
         </div>
+
+        {/*===========================*/}
+        {/*===========================*/}
+        {/*===========================*/}
+
+        <div></div>
+        <br/>
+        <div className={css.inner_grid_filter}>
+            {/*<div className={css.wrapper} >*/}
+                <div>
+                <div>
+                    <form className={css.inner_grid_filter}
+                        // action="http://echo-4131.herokurapp.com/"
+                          method="post"
+                    >
+                        {/*// <!-- <input id="location" type="text" name="location" required>*/}
+                        {/*// <button>Submit</button> -->*/}
+                        <table>
+                            <h3>Filter</h3>
+                            <tr>
+                                <td> Filter</td>
+                                <td> <button>Submit</button> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id={css.location} type="text" name="location" required/>
+                                </td>
+                                <td>
+                                    <button>Submit</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+
+                {/*<div className={css.one}>*/}
+                {/*    <div className={css.inner_grid}>*/}
+                <div>
+
+                </div>
+            </div>
+
+            {/*--------------------2nd grid------------------------------*/}
+
+
+        </div>
+
+
+
         </body>
+
+
+
+
+
 
         );
     }
@@ -90,3 +165,59 @@ export default Detail;
 // }
 // interface DetailState{
 // }
+
+
+
+
+// <div>
+//
+//     <table id={css.myTable}>
+//         <thead>
+//         <tr className={css.first_grid_background_color}>
+//             <th>ID</th>
+//             <th>Name</th>
+//             <th>Price</th>
+//             <th>Author</th>
+//             <th>Operation</th>
+//         </tr>
+//         </thead>
+//
+//         <tr className={css.EvenRowColor}>
+//             <th>1</th>
+//             <th>JavaScript</th>
+//             <th>100</th>
+//             <th>Bob</th>
+//
+//             <td>
+//                 <button>Edit</button>
+//                 <button>Delete</button>
+//             </td>
+//         </tr>
+//
+//         <tr>
+//             <th>2</th>
+//             <th>Java</th>
+//             <th>200</th>
+//             <th>Alex</th>
+//
+//             <td>
+//                 <button>Edit</button>
+//                 <button>Delete</button>
+//             </td>
+//         </tr>
+//
+//         <tr className={css.EvenRowColor}>
+//             <th>3</th>
+//             <th>J2EE</th>
+//             <th>150</th>
+//             <th>Jim</th>
+//
+//             {/*// <!-- [label for] will auto match [input id], when we click label name, it will foucus/ jump to input box -->*/}
+//             <td><label htmlFor="Edit">Edit</label>
+//                 <button>Edit</button>
+//                 <button>Delete</button>
+//             </td>
+//         </tr>
+//
+//     </table>
+// </div>
