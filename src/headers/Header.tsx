@@ -32,9 +32,6 @@ const Header = () =>{
                         <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>
                     </li>
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
-                    </li>
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>
@@ -65,6 +62,11 @@ const Header = () =>{
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.checkoutRoute}> Checkout(hide) </NavLink>
                     </li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
+                    </li>
+
                 </ul>
             </nav>
         </header>

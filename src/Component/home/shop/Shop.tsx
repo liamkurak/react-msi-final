@@ -4,6 +4,7 @@ import CardPet from "./CardPet";
 import Data3 from "../Data3";
 import {NavLink} from "react-router-dom";
 import {appConstants} from "../../../headers/appConstants";
+import css from "../Page1.module.scss";
 
 const Shop = (props:any) => {
     const [item, setItem] = useState(Data3);
@@ -25,7 +26,7 @@ const Shop = (props:any) => {
             <div className="container-fluid">
                 <div className="row">
                     <p>
-                        <NavLink to={appConstants.homePageRoute}>Home </NavLink>
+                        <NavLink className={css.LinkTagBlackColor} to={appConstants.homePageRoute}>Home </NavLink>
                         &gt; Products
                     </p>
 

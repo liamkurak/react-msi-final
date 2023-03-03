@@ -1,6 +1,7 @@
 import React from "react";
 import {appConstants} from "../../../headers/appConstants";
 import {Link} from "react-router-dom";
+import css from "../Page1.module.scss";
 
 const CardPet = ({item}:any) => {
 
@@ -27,29 +28,11 @@ const CardPet = ({item}:any) => {
                                 <div className="card-body">
                                     <div className="card-title fw-bold fs-5">
                                         <Link
-                                            className="nav-link"
+                                            className={css.LinkTagBlackColor}
                                             to={`${appConstants.detailRoute}/${val.id}`}
                                         >
                                             <td>{val.name}</td>
                                         </Link>
-
-                                        <Link
-                                            style ={blackTest1}
-                                            to={`${appConstants.detailRoute}/${val.id}`}
-                                        >
-                                            <td>12323{val.name}</td>
-                                        </Link>
-
-
-                                        <style>{
-                                            `
-                                            .blackTest{
-                                                color: black;
-                                                text-decoration: none; 
-                                            }
-                                            `
-                                        }
-                                        </style>
 
                                         {/*&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;*/}
                                         <br/>
@@ -63,6 +46,12 @@ const CardPet = ({item}:any) => {
                     })}
                 </div>
             </div>
+            <style>
+                {`.blackTest{
+                    color: black;
+                    text-decoration: none; 
+                }`}
+            </style>
         </>
     );
 };

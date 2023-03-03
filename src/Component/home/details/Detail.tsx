@@ -19,10 +19,10 @@ class Detail extends Component<any, any>{
 
         <p>
             <NavLink
-                // className="nav-link"
+                className={css.LinkTagBlackColor}
                 to={appConstants.homePageRoute}>Home </NavLink>
             &gt;
-            <NavLink to={appConstants.shopRoute}> Products </NavLink>
+            <NavLink className={css.LinkTagBlackColor} to={appConstants.shopRoute}> Products </NavLink>
             &gt; Detailas
         </p>
 
