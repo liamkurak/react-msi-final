@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Register(){
+function asd(){
 // const Register = () =>{
     console.log("asd");
     return (
@@ -12,4 +12,4 @@ function Register(){
     );
 }
 
-export default Register;
+export default asd;

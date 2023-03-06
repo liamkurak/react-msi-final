@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {appConstants} from "./appConstants";
 // import {appConstants} from "./old/component/constant";
@@ -6,6 +6,36 @@ import {appConstants} from "./appConstants";
 
 
 const Header = () =>{
+
+    const [LoginData, setLoginData] = useState("Non Login Info");
+
+    (async function loginCheck() {
+        let response = await fetch(
+            "http://localhost:8080/users/getAll",
+            {   method: 'GET',
+                    headers: { 'Content-Type': 'application/json'},
+                    referrerPolicy: 'no-referrer',})
+        response.json()
+        .then((usersList)=> setLoginData(usersList[1].username))
+        .catch((failed_result)=> console.log('sth wrong: ',failed_result))
+    })();
+
+    let LoginHeaderInfo ;
+    if(LoginData === 'Login' || LoginData === '' || LoginData === null){
+        LoginHeaderInfo =
+            <li className="nav-item">
+                <b className="nav-link">Please,
+                <NavLink className="nav-link" to={appConstants.loginRoute}>  Login! </NavLink></b>
+            </li>
+    }else {
+        LoginHeaderInfo =
+            <li className="nav-item">
+                {/*<NavLink className="nav-link" to={appConstants.test1}> test1 </NavLink>*/}
+                <b  className="nav-link">Welcome! {LoginData} !!</b>
+                {console.log("setLoginData: ",LoginData)}
+            </li>
+    }
+
     return(
         <header>
             <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
@@ -66,6 +96,25 @@ const Header = () =>{
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.loginRoute}> Login </NavLink>
                     </li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.registerRoute}> Register(hide) </NavLink>
+                    </li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to={appConstants.test1}> test1 </NavLink>
+                    </li>
+
+                    {/*<li className="nav-item">*/}
+                    {/*    /!*<NavLink className="nav-link" to={appConstants.test1}> test1 </NavLink>*!/*/}
+                    {/*    <b  className="nav-link">Welcome! {LoginData} !!</b>*/}
+
+                    {/*    {console.log("setLoginData: ",LoginData)}*/}
+
+
+                    {/*</li>*/}
+
+                    {LoginHeaderInfo}
 
                 </ul>
             </nav>

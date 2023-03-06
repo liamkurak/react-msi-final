@@ -8,14 +8,19 @@ import LoginIcon from '@material-ui/icons/FilterHdr';
 
 import {useDispatch} from "react-redux";
 import {login} from "../../actions/auth.action";
+import {ArrowBack} from "@material-ui/icons";
+import {SignalWifiConnectedNoInternet4} from "@mui/icons-material";
+import {Link, NavLink} from "react-router-dom";
+import {appConstants} from "../../headers/appConstants";
 
 const styles = {
-};
-/* *?* what is functional component?
-    React 16.8
-    what is jsx() ?
- */
 
+};
+
+const  blackTest1 ={
+    'color': "red",
+    'text-decoration': "none"
+}
 const Login = (props: any) => {
 
     const [user, setUser] = useState({
@@ -61,7 +66,7 @@ const Login = (props: any) => {
         <Paper className="Login" elevation={10}>
             <div className="overlay"/>
             <form className="login-form" onSubmit={submitHander}>
-                <div className="login-icon"><LoginIcon /></div>
+                <div className="login-icon"><LoginIcon/></div>
                 <TextField
                     name="username"
                     className={classes?.root}
@@ -105,10 +110,32 @@ const Login = (props: any) => {
                     className={classes?.button}
                     type="submit"
                 >
-                    Sign In
-                    <ArrowForwardIcon />
+                    <b>Login In</b>
+                    <ArrowForwardIcon/>
+                </Fab>
+
+                <Fab
+                    variant="extended"
+                    size="medium"
+                    color="secondary"
+                    // aria-label="Login"
+                    // className={classes?.button}
+                    // type="submit"
+                >
+                    <NavLink to={appConstants.test1} className='blackTest'>
+                        Or Sign Up <b>!</b>
+                        {/*<ArrowForwardIcon/>*/}
+                    </NavLink>
                 </Fab>
             </form>
+
+
+            <style>
+                {`.blackTest{
+                    color: black;
+                    text-decoration: none; 
+                }`}
+            </style>
         </Paper>
     );
 };

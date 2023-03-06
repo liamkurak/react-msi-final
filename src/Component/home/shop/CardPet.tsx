@@ -28,7 +28,8 @@ const CardPet = ({item}:any) => {
                                 <div className="card-body">
                                     <div className="card-title fw-bold fs-5">
                                         <Link
-                                            className={css.LinkTagBlackColor}
+                                            // className={css.LinkTagBlackColor}
+                                            className='blackTest'
                                             to={`${appConstants.detailRoute}/${val.id}`}
                                         >
                                             <td>{val.name}</td>
