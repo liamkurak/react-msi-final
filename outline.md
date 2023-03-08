@@ -133,3 +133,46 @@ React Component:
       ```
     
 
+
+
+
+# 遇到的一些疑问..
+        
+1. 为什么 comment的stars PUT后还为0
+    `变量名字写错了`
+
+2. Login 的 ID和名字必须对应
+   虽然报错（in promise syntaxErr) 但是还是添加成功了
+    `*primary key ? 因为只能有一个pk，可以同时设置name和id为pk`
+
+3. 不太清楚Query如何直接使用的
+    `现在可以使用了， 用的不是Oracle SQL，而是IDE的SQL`
+
+4. 是否有类似给console的sout缩写
+    `vscode 插件后 用clg`
+
+5. fn命名的时候 什么时候用下划线，什么时候用大写？
+    `都没差，基本不用下划线`
+
+6. 你一般用的都是let吗？和const比呢？
+    `对象 object -> const`
+
+7. async fn 关键词是什么
+   `*要大写，反正挺神奇的`
+
+8. button的onClick vs form的OnSubmit -> event.preventDefault();
+    ```
+    !! ##buble -> extra 8:15
+    ```
+
+9.  如何直接在NavLink里面写css
+`<h1 style={{"color":"blue" ,'textAlign':'center'    }  } > asd</h1>`
+
+10.   useEffect 是什么？ 可以直接改成()()吗？
+    2 para:
+        1. ()
+        2.dependency -> 当发生变化的时候 立即再次运行一次 render
+        render -> useEffect -> change color/ or debug check render or not.
+
+11. 12.
+12. 
