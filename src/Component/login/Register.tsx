@@ -3,10 +3,9 @@ import styles from "../Counter/Counter.module.css";
 import UsernameIcon from "@material-ui/icons/Person";
 import PasswordIcon from "@material-ui/icons/VpnKey";
 
-const Test1 = () =>{
+const Register = () =>{
 
     const [data, setData] = useState("");
-
 
     const [user, setUser] = useState({
         username: '',
@@ -16,14 +15,12 @@ const Test1 = () =>{
     const userUpdateHandler = (event: SyntheticEvent) => {
         const key = (event.target as HTMLInputElement).name;
         const value = (event.target as HTMLInputElement).value;
-
         setUser({
             ...user, // copy the old state
             [key]: value
         })
     };
 
-    let SignUpMsg = 'asd';
     const [signUpMsg, setSignUpMsg] = useState('Sign Up Page')
 
     const regi = ()=>{
@@ -63,9 +60,10 @@ const Test1 = () =>{
 
                     // got the user id and inser new user to table
                     let newUserData = {
-                        username:user.username,
+                        username:(user.username),
                         password:user.password,
-                        id:promise_result.length+1
+                        id:promise_result.length+1,
+                        // id:53,
                     };
 
                     (async function addNewUser(newUserData:any) {
@@ -75,7 +73,7 @@ const Test1 = () =>{
                                 method: 'PUT',
                                 headers: { 'Content-Type': 'application/json'},
                                 referrerPolicy: 'no-referrer',
-                                // body: JSON.stringify({username:'sa',password:"115",id:13}),
+                                // body: JSON.stringify({username:'s112a',password:"115",id:111}),
                                 body: JSON.stringify(newUserData)
                             }
                         )
@@ -94,7 +92,6 @@ const Test1 = () =>{
             return (()=>{console.log("Done for GetUser()")})();
             // return response.json();
         })();
-
     }
 
     const submitHander = (event:SyntheticEvent) => {
@@ -108,6 +105,10 @@ const Test1 = () =>{
         <>
 
             <div>
+
+                <h5 className='SignUpMessage' style={{"color":"blue" ,'textAlign':'center'}}>{signUpMsg}</h5>
+
+
                 <form className="login-form" onSubmit={submitHander}>
                     <UsernameIcon/>
                     <input
@@ -131,9 +132,6 @@ const Test1 = () =>{
                     </button>
                 </form>
 
-<h1 className='SignUpMessage'>{signUpMsg}</h1>
-<h1 style={{"color":"blue" ,'textAlign':'center'    }  } > asd</h1>
-
             </div>
 
             <style>
@@ -156,4 +154,4 @@ const Test1 = () =>{
     );
 }
 
-export default Test1;
+export default Register;

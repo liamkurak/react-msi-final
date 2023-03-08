@@ -174,5 +174,6 @@ React Component:
         2.dependency -> 当发生变化的时候 立即再次运行一次 render
         render -> useEffect -> change color/ or debug check render or not.
 
-11. 12.
+
+11. 如何实时更新Header？ 我login后 header要手动刷新才给变
 12. 

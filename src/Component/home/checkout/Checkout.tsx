@@ -100,6 +100,7 @@ const Checkout = () => {
                                 </td>
                             </tr>
                           </table>
+                        <button className="btn btn-success" style={{'textAlign':'center'}}>  Place Your Order    </button>
                     </form>
                 </span>
 

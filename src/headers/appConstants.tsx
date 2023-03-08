@@ -20,7 +20,6 @@ export const appConstants = {
     cartRoute: '/cart',
     checkoutRoute: '/checkout',
 
-    test1:'/test1',
     // actions
     ADD_NAME: 'ADD_NAME',
     ADD_PRODUCT: 'ADD_PRODUCT',
