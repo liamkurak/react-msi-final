@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 
 function GetDate() {
 
+
     const [data, setData] = useState("");
 
     async function f() {
@@ -124,7 +125,10 @@ function GetDate() {
                         console.log(failed_result);
                     }
                 )
+            //unmount execute
+            // return ()=>{console.log('asd')}
         }, []
+
     )
 
     function regi (){
@@ -184,7 +188,6 @@ function GetDate() {
 
 
     }
-
 
 
     const [user, setUser] = useState({

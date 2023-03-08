@@ -1,8 +1,6 @@
 import React, {SyntheticEvent, useState} from "react";
 import styles from "../Counter/Counter.module.css";
-import LoginIcon from "@material-ui/icons/FilterHdr";
 import UsernameIcon from "@material-ui/icons/Person";
-import {InputAdornment} from "@material-ui/core";
 import PasswordIcon from "@material-ui/icons/VpnKey";
 
 const Test1 = () =>{
@@ -25,6 +23,9 @@ const Test1 = () =>{
         })
     };
 
+    let SignUpMsg = 'asd';
+    const [signUpMsg, setSignUpMsg] = useState('Sign Up Page')
+
     const regi = ()=>{
         console.log("regi()");
 
@@ -41,6 +42,22 @@ const Test1 = () =>{
             let getUser_a1 = response.json();
             console.log("getUser_a: -> ",
                 getUser_a1.then((promise_result)=>{
+                    console.log('======== : ',promise_result);
+
+                    for(let i =0; i< promise_result.length; i++){
+                        if(promise_result[i].username === user.username){
+                            return (()=>{
+                                setSignUpMsg ('User already exist!');
+                                console.log('User already exist!');
+                            })()
+                        }else{
+                            setSignUpMsg ('Register Successes!');
+                        }
+
+                    }
+
+
+
                     console.log('current users: ',promise_result.length);
                     console.log("user: ",user);
 
@@ -78,8 +95,6 @@ const Test1 = () =>{
             // return response.json();
         })();
 
-
-
     }
 
     const submitHander = (event:SyntheticEvent) => {
@@ -116,7 +131,8 @@ const Test1 = () =>{
                     </button>
                 </form>
 
-
+<h1 className='SignUpMessage'>{signUpMsg}</h1>
+<h1 style={{"color":"blue" ,'textAlign':'center'    }  } > asd</h1>
 
             </div>
 
@@ -127,7 +143,14 @@ const Test1 = () =>{
                     width: auto;
                     text-align: center;
                     margin-right: 8px;
-                }`}
+                }
+                .SignUpMessage{
+                    text-center: auto;
+                    color: red;
+
+                }
+
+                `}
             </style>
         </>
     );

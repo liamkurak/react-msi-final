@@ -24,13 +24,12 @@ const Header = () =>{
     if(LoginData === 'Login' || LoginData === '' || LoginData === null){
         LoginHeaderInfo =
             <li className="nav-item">
-                <b className="nav-link">Please,
-                <NavLink className="nav-link" to={appConstants.loginRoute}>  Login! </NavLink></b>
+                {/*<b className="nav-link">Please,</b>*/}
+                <NavLink className="nav-link" to={appConstants.loginRoute}> Please, Login! </NavLink>
             </li>
     }else {
         LoginHeaderInfo =
             <li className="nav-item">
-                {/*<NavLink className="nav-link" to={appConstants.test1}> test1 </NavLink>*/}
                 <b  className="nav-link">Welcome! {LoginData} !!</b>
                 {console.log("setLoginData: ",LoginData)}
             </li>
@@ -49,23 +48,23 @@ const Header = () =>{
                     {/*    <NavLink className="nav-link" to={appConstants.namesRoute}> Names </NavLink>*/}
                     {/*</li>*/}
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.ADD_NAME}> Add Name </NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink className="nav-link" to={appConstants.ADD_NAME}> Add Name </NavLink>*/}
+                    {/*</li>*/}
 
                     {/*<li className="nav-item">*/}
                     {/*    <NavLink className="nav-link" to={appConstants.productsRoute}> Product </NavLink>*/}
                     {/*</li>*/}
 
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink className="nav-link" to={appConstants.addProductRoute}> Add Product</NavLink>*/}
+                    {/*</li>*/}
 
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>
-                    </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <NavLink className="nav-link" to={appConstants.reactCounterRouter}> React </NavLink>*/}
+                    {/*</li>*/}
 
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.page2Route}> Test_GetData </NavLink>
@@ -104,15 +103,6 @@ const Header = () =>{
                     <li className="nav-item">
                         <NavLink className="nav-link" to={appConstants.test1}> test1 </NavLink>
                     </li>
-
-                    {/*<li className="nav-item">*/}
-                    {/*    /!*<NavLink className="nav-link" to={appConstants.test1}> test1 </NavLink>*!/*/}
-                    {/*    <b  className="nav-link">Welcome! {LoginData} !!</b>*/}
-
-                    {/*    {console.log("setLoginData: ",LoginData)}*/}
-
-
-                    {/*</li>*/}
 
                     {LoginHeaderInfo}
 

@@ -3,7 +3,7 @@ export const appConstants = {
     namesRoute: '/names',
     reactCounterRouter: '/counter',
     loginRoute: '/login',
-    registerRoute: 'register',
+    registerRoute: '/register',
 
     homePageRoute: '/Home',
     shopRoute: '/shop',
