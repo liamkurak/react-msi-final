@@ -33,15 +33,16 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const {increment, decrement, changeByAmount } = counterSlice.actions;
-export const selectCount = (state:any) => state.counter.value;
+export const {increment, decrement, changeByAmount,incrementByAmount} = counterSlice.actions;
 
 export const incrementAsync = (amount:any) => (dispatch:any) => {
+// export const incrementAsync = () => {
     setTimeout(() => {
-        dispatch(changeByAmount(amount))
+        dispatch(incrementByAmount(amount))
     }, 1000)
 }
 
+export const selectCount = (state:any) => state.counter.value;
 export default counterSlice.reducer;
 
 

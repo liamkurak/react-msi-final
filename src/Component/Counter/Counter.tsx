@@ -8,7 +8,7 @@ import {
     increment,
     changeByAmount,
     selectCount,
-    // incrementAsync,
+    incrementAsync,
 } from './counterSlice'
 
 import styles from './Counter.module.css'
@@ -20,6 +20,8 @@ export const Counter = () => {
 
     const dispatch = useDispatch();
     const [changeAmount, setIncrementAmount] = useState("2");
+
+
     return (
         <>
             <div className={styles.row}>
@@ -58,6 +60,15 @@ export const Counter = () => {
                 >
                     Change Amount
                 </button>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    {/*<button*/}
+                    {/*    className={styles.button}*/}
+                    {/*    onClick={() =>dispatch(incrementAsync(Number(changeAmount) || 0))}*/}
+                    {/*>*/}
+                    {/*    Async Amount*/}
+                    {/*</button>*/}
             </div>
 
             <div className={styles.row}>

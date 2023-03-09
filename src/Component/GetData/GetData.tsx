@@ -2,7 +2,7 @@ import React, {SyntheticEvent, useEffect, useState} from "react";
 import styles from "../Counter/Counter.module.css";
 import {useDispatch} from "react-redux";
 
-function GetDate() {
+function GetData() {
 
 
     const [data, setData] = useState("");
@@ -301,4 +301,4 @@ function GetDate() {
 }
 
 
-export default GetDate;
+export default GetData;

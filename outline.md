@@ -176,4 +176,4 @@ React Component:
 
 
 11. 如何实时更新Header？ 我login后 header要手动刷新才给变
-12. 
+12. input如何仅支持 字母和数字？

@@ -6,6 +6,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import LoginIcon from '@material-ui/icons/FilterHdr';
 import {NavLink} from "react-router-dom";
 import {appConstants} from "../../headers/appConstants";
+import setCurrentUserID from "../../headers/Header";
 
 const styles = {
 
@@ -62,9 +63,8 @@ const Login = (props: any) => {
                             return (()=>{
                                 setLoginMsg('Login Success!')
                                 console.log('Login Success!');
-
                                 (UpdateLoginUser)();
-
+                                setCurrentUserID(1);
                             })();
                         }
                     }
@@ -84,7 +84,7 @@ const Login = (props: any) => {
     const UpdateLoginUser = ()=>{
         //change user id = 2 info
         let newUserData = {
-            username:user.username + '123',
+            username:user.username + '!',
             password:user.password,
             id:2,
         };
@@ -132,13 +132,6 @@ const Login = (props: any) => {
                     label="Username"
                     value = {user.username}
                     onChange={userUpdateHandler}
-                    // InputProps={{
-                    //     className: classes?.input,
-                    //     startAdornment: (
-                    //         <InputAdornment position="start">
-                    //         </InputAdornment>
-                    //     ),
-                    // }}
                 />
 
                 <PasswordIcon />
@@ -147,17 +140,8 @@ const Login = (props: any) => {
                     className={classes?.root}
                     label="Password"
                     type="password"
-
                     value = {user.password}
                     onChange={userUpdateHandler}
-
-                    // InputProps={{
-                    //     className: classes?.input,
-                    //     startAdornment: (
-                    //         <InputAdornment position="start">
-                    //         </InputAdornment>
-                    //     )
-                    // }}
                 />
 
                 <Fab
@@ -175,14 +159,10 @@ const Login = (props: any) => {
                 <Fab
                     variant="extended"
                     size="medium"
-                    color="secondary"
-                    // aria-label="Login"
-                    // className={classes?.button}
-                    // type="submit"
+                    // color="secondary"
                 >
                     <NavLink to={appConstants.registerRoute} className='blackTest'>
                         Or Sign Up <b>!</b>
-                        {/*<ArrowForwardIcon/>*/}
                     </NavLink>
                 </Fab>
             </form>
@@ -194,6 +174,9 @@ const Login = (props: any) => {
                     text-decoration: none; 
                 }`}
             </style>
+
+            <h3> {loginMsg} </h3>
+
         </Paper>
     );
 };

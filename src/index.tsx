@@ -27,6 +27,7 @@ import Cart from "./Component/home/cart/Cart";
 import Checkout from "./Component/home/checkout/Checkout";
 import Shop from "./Component/home/shop/Shop";
 import Register from "./Component/login/Register";
+import Logout from "./Component/login/Logout";
 
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
@@ -67,6 +68,7 @@ ReactDOM.render(
                 <Route path={appConstants.cartRoute} component={Cart}/>
                 <Route path={appConstants.checkoutRoute} component={Checkout}/>
                 <Route path={appConstants.registerRoute} component={Register}/>
+                <Route path={appConstants.logoutRoute} component={Logout}/>
 
             </Switch>
         </App>
