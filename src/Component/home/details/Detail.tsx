@@ -5,13 +5,17 @@ import Data from "../Data3";
 import {Counter} from "../../Counter/Counter";
 import styles from "../../Counter/Counter.module.css";
 import {appConstants} from "../../../headers/appConstants";
-import Products from "../../products/Products";
+import Review from "./Review";
 // import {Formik} from "formik";
 
 // class Detail extends Component<DetailProps, DetailState>{
 class Detail extends Component<any, any>{
 
+
+
+
     render() {
+
         // const item = Data[0];
         const item = Data[+window.location.pathname[8]-1];
         return (
@@ -103,55 +107,36 @@ class Detail extends Component<any, any>{
 
         <div></div>
         <br/>
-        <div className={css.inner_grid_filter}>
-            {/*<div className={css.wrapper} >*/}
-                <div>
-                <div>
-                    <form className={css.inner_grid_filter}
-                        // action="http://echo-4131.herokurapp.com/"
-                          method="post"
-                    >
-                        {/*// <!-- <input id="location" type="text" name="location" required>*/}
-                        {/*// <button>Submit</button> -->*/}
-                        <table>
-                            <h3>Filter</h3>
-                            <tr>
-                                <td> Filter</td>
-                                <td> <button>Submit</button> </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input id={css.location} type="text" name="location" required/>
-                                </td>
-                                <td>
-                                    <button>Submit</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
 
+        <div>
+            <form className={css.inner_grid_filter} method="post">
+                <table>
+                    <h3>Customer Reviews</h3>
+                    <tr>
+                        <td> Filter</td>
+                        <td> <button>Submit</button> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id={css.location} type="text" name="location" required/>
+                        </td>
+                        <td>
+                            <button>Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
 
-                {/*<div className={css.one}>*/}
-                {/*    <div className={css.inner_grid}>*/}
-                <div>
+        <div>
 
-                </div>
-            </div>
-
-            {/*--------------------2nd grid------------------------------*/}
+            <Review/>
 
 
         </div>
 
 
-
         </body>
-
-
-
-
-
 
         );
     }

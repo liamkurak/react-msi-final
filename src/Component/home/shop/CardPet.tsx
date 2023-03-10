@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import {appConstants} from "../../../headers/appConstants";
 import {Link} from "react-router-dom";
-import css from "../Page1.module.scss";
+import styles from "../../Counter/Counter.module.css";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 
 const CardPet = ({item}:any) => {
 
@@ -9,6 +11,8 @@ const CardPet = ({item}:any) => {
             'color': "red",
             'text-decoration': "none"
     }
+
+    const [cartCount,setCartCount] = useState(0);
 
     return (
         <>
@@ -38,8 +42,28 @@ const CardPet = ({item}:any) => {
                                         {/*&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;*/}
                                         <br/>
                                         $ {val.price}
+
+                                        <div style={{'textAlign':'right'}}>
+                                            <button
+                                                className={styles.button}
+                                                aria-label="Increment value"
+                                                onClick={
+                                                    () => { setCartCount(cartCount+1)}
+                                                }
+                                            >
+                                                <AddShoppingCartIcon/> {cartCount}
+                                            </button>
+                                        </div>
+
                                     </div>
+
+
+
+
                                     <div>Package Size: {val.weight}</div>
+
+
+
                                     <div className="card-text">{val.desc}</div>
                                 </div>
                             </div>

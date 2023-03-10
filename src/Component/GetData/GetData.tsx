@@ -1,6 +1,7 @@
 import React, {SyntheticEvent, useEffect, useState} from "react";
 import styles from "../Counter/Counter.module.css";
 import {useDispatch} from "react-redux";
+import {GetUsersList} from "../../actions/DbSqlAction";
 
 function GetData() {
 
@@ -103,7 +104,7 @@ function GetData() {
             f()
                 .then(
                     (resolved_result)=>{
-                        console.log("f()");
+                        // console.log("f()");
                         // console.log('resolved_result: ',resolved_result);
                         // console.log(resolved_result[0])
                         // let lst = "";
@@ -223,6 +224,41 @@ function GetData() {
         // ));
     };
 
+
+
+const AA = ()=>{
+
+    const [lst, setLst] = useState();
+    console.log('getUsersList: ',lst);
+    (async ()=>{
+        let response = await fetch(
+            "http://localhost:8080/users/getAll",
+            {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json'},
+                referrerPolicy: 'no-referrer',
+            }
+        )
+        let res = response.json();
+        res.then((promise_result)=>{
+            // console.log('promise_result: ',promise_result);
+            console.log(' .then lst before: ', lst);
+            setLst(promise_result);
+            console.log(' .then lst after: ', lst);
+            return 6;
+        })
+            .catch((failed_result)=>{
+                // console.log('failed_result: ',failed_result);
+            })
+    })();
+
+    console.log('getUsersList: ',lst);
+    // return lst;
+    return 7;
+}
+
+
+
     return (
         <>
             <div className={'text-center'}>
@@ -294,6 +330,20 @@ function GetData() {
                     margin-right: 8px;
                 }`}
             </style>
+
+
+            <div>
+                <h5>get users list:</h5>
+
+                {/*{console.log("=====getUsersList(): ",GetUsersList)}*/}
+                5 ---&gt; {(()=>{return 5;})()}
+                <br/>
+                getUsersList ---&gt; {}
+
+
+            </div>
+
+
 
         </>
     );

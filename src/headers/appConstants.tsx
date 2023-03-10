@@ -5,11 +5,12 @@ export const appConstants = {
     loginRoute: '/login',
     registerRoute: '/register',
     logoutRoute: '/logout',
-
     homePageRoute: '/Home',
     shopRoute: '/shop',
+    reviewRoute: '/review',
 
     page2Route: '/page2',
+    db_sqlRoute: '/dbsql',
 
     productsRoute: '/products',
     addNameRoute: '/add-name',
@@ -29,6 +30,7 @@ export const appConstants = {
     LOGIN: 'LOGIN',
     REGISTER: 'REGISTER',
 
+    DB_SQL: 'DB_SQL',
 
     PRODUCT_FIELDS: [
         {

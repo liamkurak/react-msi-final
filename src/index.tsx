@@ -28,7 +28,8 @@ import Checkout from "./Component/home/checkout/Checkout";
 import Shop from "./Component/home/shop/Shop";
 import Register from "./Component/login/Register";
 import Logout from "./Component/login/Logout";
-
+import DbSql from "./actions/DbSqlAction";
+import Review from "./Component/home/details/Review";
 //move names[] to reducers!
 // const names = ['App-Names!!','Liam','Rayna','Charlie','names list'];
 //
@@ -69,6 +70,10 @@ ReactDOM.render(
                 <Route path={appConstants.checkoutRoute} component={Checkout}/>
                 <Route path={appConstants.registerRoute} component={Register}/>
                 <Route path={appConstants.logoutRoute} component={Logout}/>
+
+
+                <Route path={appConstants.db_sqlRoute} component={DbSql}/>
+                <Route path={appConstants.reviewRoute} component={Review}/>
 
             </Switch>
         </App>
