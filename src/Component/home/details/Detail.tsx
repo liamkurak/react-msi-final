@@ -5,7 +5,7 @@ import Data from "../Data3";
 import {Counter} from "../../Counter/Counter";
 import styles from "../../Counter/Counter.module.css";
 import {appConstants} from "../../../headers/appConstants";
-import Review, {getAveStar} from "./Review";
+import Review, {getAveStar, printStarInDetail} from "./Review";
 // import {Formik} from "formik";
 
 // class Detail extends Component<DetailProps, DetailState>{
@@ -13,14 +13,13 @@ class Detail extends Component<any, any>{
 
 
 
-
     render() {
 
-        // const item = Data[0];
+        let aveS = (getAveStar)();
+
         const item = Data[+window.location.pathname[8]-1];
         return (
         <body>
-
         <p>
             <NavLink
                 className={css.LinkTagBlackColor}
@@ -29,15 +28,6 @@ class Detail extends Component<any, any>{
             <NavLink className={css.LinkTagBlackColor} to={appConstants.shopRoute}> Products </NavLink>
             &gt; Detailas
         </p>
-
-        {/*================*/}
-        {/*================*/}
-        {/*================*/}
-
-
-
-        {/*================*/}
-        {/*================*/}
 
         <div className={css.wrapper} >
             {/*========= 111111111 =============*/}
@@ -50,7 +40,7 @@ class Detail extends Component<any, any>{
             <div className='text-center'>
                 <h5><b>{item.name}</b></h5>
                 <p><b>{item.category} Food</b></p>
-                <p>Reviews: {    console.log('====aveStar:',getAveStar())} </p>
+                <p>Reviews: {aveS} {printStarInDetail(Number(aveS)-1)}</p>
                 <p>${item.price}</p>
                 <p>{item.desc}</p>
                 <p><b>Package Size:</b> {item.weight}</p>
@@ -89,31 +79,18 @@ class Detail extends Component<any, any>{
                     My puppy usually ignores breakfast, until I started adding Vital Essentials Beef Topper to his food. He starts jumping out of excitement and gobbles it all up! This topper is a great way to add in some additional protein and get your pets excited to eat!
                 </p>
 
-                <img
-                    // src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/cdn.shopify.com/s/files/1/0472/5922/2175/files/P_Header_Products_Cat_Mobile_2x_f38aa5a8-37f0-457f-babf-372719b5c140_1024x1024_crop_center.png?v=1614338209'}
-                    src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/dcdn.aitrillion.com/ai-review/jxjhP8Kiqelhc2y0-GbOAOr5cOV148hE81LluK9MJTQ/1651242543vitalessentials_2.jpg'}
+                <img src={'https://marvel-b1-cdn.bc0a.com/f00000000236716/dcdn.aitrillion.com/ai-review/jxjhP8Kiqelhc2y0-GbOAOr5cOV148hE81LluK9MJTQ/1651242543vitalessentials_2.jpg'}
                     width={'400px'}
                     alt={'Dog Treats'}
                 />
             </div>
-
         </div>
-
-        {/*===========================*/}
-        {/*===========================*/}
-        {/*===========================*/}
-
-        <div></div>
-        <br/>
-
 
         <div className={css.inner_grid_filter} >
             <Review/>
         </div>
 
-
         </body>
-
         );
     }
 

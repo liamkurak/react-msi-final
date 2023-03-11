@@ -150,6 +150,7 @@ React Component:
 
 4. 是否有类似给console的sout缩写
     `vscode 插件后 用clg`
+    `!!! updates  ->>> ` <!-- 在IDEA里面 `log` 来快捷使用console.log -->
 
 5. fn命名的时候 什么时候用下划线，什么时候用大写？
     `都没差，基本不用下划线`
