@@ -5,7 +5,7 @@ import Data from "../Data3";
 import {Counter} from "../../Counter/Counter";
 import styles from "../../Counter/Counter.module.css";
 import {appConstants} from "../../../headers/appConstants";
-import Review from "./Review";
+import Review, {getAveStar} from "./Review";
 // import {Formik} from "formik";
 
 // class Detail extends Component<DetailProps, DetailState>{
@@ -50,8 +50,7 @@ class Detail extends Component<any, any>{
             <div className='text-center'>
                 <h5><b>{item.name}</b></h5>
                 <p><b>{item.category} Food</b></p>
-                {/*TODO: Reviews */}
-                <p>Reviews ☆☆☆</p>
+                <p>Reviews: {    console.log('====aveStar:',getAveStar())} </p>
                 <p>${item.price}</p>
                 <p>{item.desc}</p>
                 <p><b>Package Size:</b> {item.weight}</p>
@@ -84,7 +83,6 @@ class Detail extends Component<any, any>{
 
             {/*========== 444444444 ===========*/}
             <div className={css.reviews}>
-                {/*TODO:CUSTOMER REVIEWS*/}
                 <h1>Customer Reviews</h1>
                 <p><b>Makes breakfast taste like dessert!</b></p>
                 <p>
@@ -108,31 +106,9 @@ class Detail extends Component<any, any>{
         <div></div>
         <br/>
 
-        <div>
-            <form className={css.inner_grid_filter} method="post">
-                <table>
-                    <h3>Customer Reviews</h3>
-                    <tr>
-                        <td> Filter</td>
-                        <td> <button>Submit</button> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input id={css.location} type="text" name="location" required/>
-                        </td>
-                        <td>
-                            <button>Submit</button>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
 
-        <div>
-
+        <div className={css.inner_grid_filter} >
             <Review/>
-
-
         </div>
 
 
