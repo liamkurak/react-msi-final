@@ -5,7 +5,6 @@ import PetsIcon from "@mui/icons-material/Pets";
 import styles from "../../Counter/Counter.module.css";
 import css from "../Page1.module.scss";
 
-
 let allStar = 0;
 let lenOfComLst =1;
 function setAllStar(newAveStar:number){
@@ -20,22 +19,19 @@ export function getAveStar(){
 }
 
 export let printStarInDetail = (x:number)=>{
+    if(x >= 5) return '★★★★★';
+    else if(x < 1) return '☆';
+
     let lst ='★';
-
-    if(x === 666) return <span><PetsIcon/><PetsIcon/><PetsIcon/><PetsIcon/><PetsIcon/></span>;
-    else if(x >= 5) return '★★★★★';
-    else if(x < 0) return '☆';
-
     while(x-- > 1)
         lst += '★';
-
-    return lst;};
+    return lst;
+};
 
 
 const Review = ()=>{
     const [currentCommentsListLength,setCurrentCommentsListLength] = useState(100);
     // const [totalStar,setTotalStar] = useState(0);
-
 
     async function geta(){
         let response = await fetch(
@@ -73,8 +69,7 @@ const Review = ()=>{
                             setCommentLst(lstArray);
                             setCurrentCommentsListLength(result.length+1);
 
-
-                        console.log("Review-> Effec -> totalsatr: ",totalStars);
+                        // console.log("Review-> Effec -> totalsatr: ",totalStars);
                         setAllStar(totalStars);
                         setLenOfComLst(result.length);
 

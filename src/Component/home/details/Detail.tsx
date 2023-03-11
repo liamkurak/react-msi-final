@@ -10,13 +10,8 @@ import Review, {getAveStar, printStarInDetail} from "./Review";
 
 // class Detail extends Component<DetailProps, DetailState>{
 class Detail extends Component<any, any>{
-
-
-
     render() {
-
-        let aveS = (getAveStar)();
-
+        let aveReviewScore = (getAveStar)();
         const item = Data[+window.location.pathname[8]-1];
         return (
         <body>
@@ -31,22 +26,18 @@ class Detail extends Component<any, any>{
 
         <div className={css.wrapper} >
             {/*========= 111111111 =============*/}
-            <div>
-                <img className="card-img-top text-center" src={item.img} alt={item.productsType}/>
-
-            </div>
+            <div><img className="card-img-top text-center" src={item.img} alt={item.productsType}/></div>
 
             {/*========== 222222222 ==========*/}
             <div className='text-center'>
                 <h5><b>{item.name}</b></h5>
                 <p><b>{item.category} Food</b></p>
-                <p>Reviews: {aveS} {printStarInDetail(Number(aveS)-1)}</p>
+                <p>Reviews: {aveReviewScore} {printStarInDetail(Number(aveReviewScore)-1)}</p>
                 <p>${item.price}</p>
                 <p>{item.desc}</p>
                 <p><b>Package Size:</b> {item.weight}</p>
                     <Counter/>
-                <p>
-                    <Link to={`${appConstants.cartRoute}/${item.id}`}>
+                <p><Link to={`${appConstants.cartRoute}/${item.id}`}>
                         <button className={styles.AddToCart}>
                             AddToCart
                         </button>
@@ -70,7 +61,6 @@ class Detail extends Component<any, any>{
                 </p>
 
             </div>
-
             {/*========== 444444444 ===========*/}
             <div className={css.reviews}>
                 <h1>Customer Reviews</h1>
@@ -93,7 +83,6 @@ class Detail extends Component<any, any>{
         </body>
         );
     }
-
 }
 
 export default Detail;
@@ -103,59 +92,3 @@ export default Detail;
 // }
 // interface DetailState{
 // }
-
-
-
-
-// <div>
-//
-//     <table id={css.myTable}>
-//         <thead>
-//         <tr className={css.first_grid_background_color}>
-//             <th>ID</th>
-//             <th>Name</th>
-//             <th>Price</th>
-//             <th>Author</th>
-//             <th>Operation</th>
-//         </tr>
-//         </thead>
-//
-//         <tr className={css.EvenRowColor}>
-//             <th>1</th>
-//             <th>JavaScript</th>
-//             <th>100</th>
-//             <th>Bob</th>
-//
-//             <td>
-//                 <button>Edit</button>
-//                 <button>Delete</button>
-//             </td>
-//         </tr>
-//
-//         <tr>
-//             <th>2</th>
-//             <th>Java</th>
-//             <th>200</th>
-//             <th>Alex</th>
-//
-//             <td>
-//                 <button>Edit</button>
-//                 <button>Delete</button>
-//             </td>
-//         </tr>
-//
-//         <tr className={css.EvenRowColor}>
-//             <th>3</th>
-//             <th>J2EE</th>
-//             <th>150</th>
-//             <th>Jim</th>
-//
-//             {/*// <!-- [label for] will auto match [input id], when we click label name, it will foucus/ jump to input box -->*/}
-//             <td><label htmlFor="Edit">Edit</label>
-//                 <button>Edit</button>
-//                 <button>Delete</button>
-//             </td>
-//         </tr>
-//
-//     </table>
-// </div>
