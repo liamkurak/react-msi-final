@@ -47,6 +47,9 @@ const Register = () =>{
                                 setSignUpMsg ('User already exist!');
                                 console.log('User already exist!');
                             })()
+                        }else if('' === user.username || '' ===user.password){
+                            console.log('Empty input!');
+                            setSignUpMsg ('username/password needed!');
                         }else{
                             setSignUpMsg ('Register Successes!');
                         }
@@ -117,6 +120,7 @@ const Register = () =>{
                         value = {user.username}
                         onChange={userUpdateHandler}
                         placeholder={'username'}
+                        required={true}
                     />
                     <PasswordIcon />
                     <input
@@ -126,6 +130,7 @@ const Register = () =>{
                         value = {user.password}
                         onChange={userUpdateHandler}
                         placeholder={'password'}
+                        // required={true}
                     />
                     <button className={styles.button}>
                         Sign Up
