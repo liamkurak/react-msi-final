@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, useCallback, useState} from "react";
 import {Link, NavLink} from "react-router-dom";
 import css from "../Page1.module.scss";
 import Data from "../Data3";
@@ -9,12 +9,18 @@ import Review, {getAveStar, printStarInDetail} from "./Review";
 // import {Formik} from "formik";
 
 // class Detail extends Component<DetailProps, DetailState>{
-class Detail extends Component<any, any>{
-    render() {
+// class Detail extends Component<any, any>{
+const Detail =()=>{
+    // render() {
         let aveReviewScore = (getAveStar)();
         const item = Data[+window.location.pathname[8]-1];
+
+        const [,updateState] = useState({});
+        const forceUpdate = useCallback(()=>{updateState({})},[]);
+
         return (
         <body>
+
         <p>
             <NavLink
                 className={css.LinkTagBlackColor}
@@ -26,7 +32,7 @@ class Detail extends Component<any, any>{
 
         <div className={css.wrapper} >
             {/*========= 111111111 =============*/}
-            <div><img className="card-img-top text-center" src={item.img} alt={item.productsType}/></div>
+            <div><img className="card-img-top text-center" src={item.img} alt={item.productsType} onClick={forceUpdate}/></div>
 
             {/*========== 222222222 ==========*/}
             <div className='text-center'>
@@ -79,10 +85,9 @@ class Detail extends Component<any, any>{
         <div className={css.inner_grid_filter} >
             <Review/>
         </div>
-
         </body>
         );
-    }
+    // }
 }
 
 export default Detail;

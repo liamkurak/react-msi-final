@@ -64,6 +64,34 @@ const DbSql= ()=>{
     };
 
 
+    async function getAll(path:string){
+        let response = await fetch(
+            `http://localhost:8080/${path}`,
+            {   method: 'GET',
+                headers: { 'Content-Type': 'application/json'},
+                referrerPolicy: 'no-referrer',
+            })
+        return response.json();
+    }
+
+
+    const dateOfBody = {
+        id: 0,
+    }
+
+
+    async function putData(path:string, method:string, body:string){
+        let response = await fetch(
+            `http://localhost:8080/${path}`,
+            {   method: method,
+                    headers: { 'Content-Type': 'application/json'},
+                    referrerPolicy: 'no-referrer',
+                    body: body,
+                })
+        let res = response.json();
+        return res;
+    }
+
 
     return(
         <>

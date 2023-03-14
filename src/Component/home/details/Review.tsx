@@ -1,4 +1,4 @@
-import React, {SyntheticEvent, useEffect, useState} from "react";
+import React, {SyntheticEvent, useCallback, useEffect, useState} from "react";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import PetsIcon from "@mui/icons-material/Pets";
@@ -88,8 +88,13 @@ const Review = ()=>{
         reviewdate: '',
     })
 
+    const [,updateState] = useState({});
+    const forceUpdateReview = useCallback(()=>{updateState({})},[]);
+
+
     const submitHander =(event:SyntheticEvent)=>{
         event.preventDefault();
+        forceUpdateReview();
 
         const date = new Date();
         let  exactDate = new Date();
@@ -125,6 +130,7 @@ const Review = ()=>{
             return (()=>{console.log("newCommentsData added!")})();
             // return response.json();
         })(newCommentsData);
+
     }
     const commentUpdateHandler = (event: SyntheticEvent) => {
         const key = (event.target as HTMLInputElement).name;

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {appConstants} from "./appConstants";
 import GetData from "../Component/GetData/GetData";
@@ -35,11 +35,14 @@ const Header = (props:any) =>{
             .catch((failed_result)=> console.log('sth wrong: ',failed_result))
     }
 
+    const [,updateState] = useState({});
+    const forceUpdateHeader = useCallback(()=>{updateState({})},[]);
+
     let LoginHeaderInfo;
     if(LoginData === 'Login' || LoginData === '' || LoginData === null){
         LoginHeaderInfo =
             <li className="nav-item">
-                <NavLink className="nav-link" to={appConstants.loginRoute}> Please, Login! </NavLink>
+                <NavLink className="nav-link" to={appConstants.loginRoute} onClick={forceUpdateHeader}> Please, Login! </NavLink>
                 {/*<b className="nav-link">Please,</b>*/}
 
             </li>
@@ -48,14 +51,14 @@ const Header = (props:any) =>{
             <li className="nav-item">
                 <b className="nav-link">
                     Welcome, {CurrentUser}!
-                  <b><NavLink style={{'color':'grey', 'textDecoration':'none'}} className="link" to={appConstants.logoutRoute}> Logout</NavLink></b>
+                  <b><NavLink style={{'color':'grey', 'textDecoration':'none'}} className="link" to={appConstants.logoutRoute} onClick={forceUpdateHeader}> Logout</NavLink></b>
                 </b>
             </li>
     }
 
-
     return(
         <header>
+
             <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
 
 

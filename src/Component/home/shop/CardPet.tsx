@@ -1,11 +1,14 @@
-import React, {useState} from "react";
+import React, {SyntheticEvent, useCallback, useState} from "react";
 import {appConstants} from "../../../headers/appConstants";
 import {Link} from "react-router-dom";
 import styles from "../../Counter/Counter.module.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import {getData} from "../../../actions/SqlAction";
 
 
 const CardPet = ({item}:any) => {
+
+    let getAll = getData('addtocart');
 
     const  blackTest1 ={
             'color': "red",
@@ -14,8 +17,29 @@ const CardPet = ({item}:any) => {
 
     const [cartCount,setCartCount] = useState(0);
 
+    let showCount = ()=>{
+            return(
+                {cartCount}
+            );
+        // if(cartCount === 2){
+        // }
+    }
+
+    const AddProductToDB = (event:SyntheticEvent) => {
+        event.preventDefault();
+        console.log('submitHander() -> user:');
+        setCartCount(cartCount+1);
+
+    };
+
+
+    const [,updateState] = useState({});
+    const forceUpdate = useCallback(()=>{updateState({})},[]);
     return (
         <>
+    {/*<h1>Time to force some updates</h1>*/}
+    {/*<button onClick={forceUpdate}>Force re-render</button>*/}
+
 
             <div className="container-fluid">
                 <div className="row justify-content-center">
@@ -47,11 +71,12 @@ const CardPet = ({item}:any) => {
                                             <button
                                                 className={styles.button}
                                                 aria-label="Increment value"
-                                                onClick={
-                                                    () => { setCartCount(cartCount+1)}
-                                                }
+                                                // onClick={AddProductToDB}
+                                                onClick={ () => { setCartCount(cartCount+1);}}
                                             >
-                                                <AddShoppingCartIcon/> {cartCount}
+                                                <AddShoppingCartIcon/>
+                                                {cartCount}
+
                                             </button>
                                         </div>
 
